@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Eco Bazar | Organic Grocery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/images/fav.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================================================================
+         হেডার সেকশন (index.html থেকে ইনহেরিট — zoom-fix ক্লাস অপরিবর্তিত)
+         ========================================================================= -->
+    <header class="header">
+
+        <div class="topHeader">
+            <div class="container">
+                <div class="topHeader-inner d-flex align-items-center justify-content-between flex-nowrap">
+                    <div class="topHeader-location location d-flex align-items-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 48 48">
+                            <path fill="currentColor"
+                                d="M24 4c9.389 0 17 7.611 17 17a16.92 16.92 0 0 1-4 10.955l-.022.026l-.016.019H37L26.911 42.709a4 4 0 0 1-5.822 0L11 32h.038l-.017-.02l-.021-.025A16.92 16.92 0 0 1 7 21c0-9.389 7.611-17 17-17m0 2.5C15.992 6.5 9.5 12.992 9.5 21c0 3.58 1.294 6.852 3.443 9.382l.308.362l9.657 10.251a1.5 1.5 0 0 0 2.184 0l9.657-10.25l.308-.363A14.43 14.43 0 0 0 38.5 21c0-8.008-6.492-14.5-14.5-14.5m0 7.5a7 7 0 1 1 0 14a7 7 0 0 1 0-14m0 2.5a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9" />
+                        </svg>
+                        Store Location: Lincoln- 344, Illinois, Chicago, USA
+                    </div>
+                    <div class="topHeader-utils d-none d-lg-flex align-items-center flex-shrink-0">
+                        <form action="" class="d-flex align-items-center flex-shrink-0">
+                            <select>
+                                <option value="">Eng</option>
+                                <option value="">Bn</option>
+                            </select>
+                            <select>
+                                <option value="">USD</option>
+                                <option value="">BDT</option>
+                            </select>
+                        </form>
+                        <a href="#" class="topHeader-signin flex-shrink-0">Sign In / Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainHeader d-none d-lg-block">
+            <div class="container">
+                <div class="mainHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
+                    <div class="mainHeader-logo flex-shrink-0">
+                        <a href="index.html"><img src="assets/images/logo.svg" alt="Ecobazar"></a>
+                    </div>
+                    <div class="mainHeader-search flex-shrink-0">
+                        <form>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.5"
+                                        d="M15.553 15.553a7.06 7.06 0 1 0-9.985-9.985a7.06 7.06 0 0 0 9.985 9.985m0 0L20 20" />
+                                </svg></span>
+                            <div class="d-flex flex-nowrap">
+                                <input type="text" placeholder="Search">
+                                <button type="button">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mainHeader-utils flex-shrink-0">
+                        <ul class="quickLinks mb-0">
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                        viewBox="0 0 14 14">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M7 3.183C3.98-.522.792 2.111.75 4.949C.75 9.173 5.805 12.64 7 12.64s6.25-3.468 6.25-7.692C13.208 2.11 10.02-.522 7 3.183"
+                                            stroke-width="1" />
+                                    </svg></a></li>
+                            <li><a href="#" class="shoppingCart">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="1.5"
+                                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007M8.625 10.5a.375.375 0 1 1-.75 0a.375.375 0 0 1 .75 0m7.5 0a.375.375 0 1 1-.75 0a.375.375 0 0 1 .75 0" />
+                                        </svg>
+                                        <div class="count">2</div>
+                                    </div>
+                                    <div class="cnt">
+                                        <p>Shopping cart:</p>
+                                        <h4>$57.00</h4>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomHeader d-none d-lg-block">
+            <div class="container">
+                <div class="bottomHeader-inner d-flex align-items-center justify-content-between">
+                    <nav class="bottomHeader-nav flex-shrink-0" aria-label="Primary navigation">
+                        <ul class="primaryMenu mb-0">
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a href="shop.html">Shop
+                                    <span class="arrow"><iconify-icon icon="iconoir:nav-arrow-down" width="24"
+                                            height="24"></iconify-icon></span></a>
+                                <ul class="submenu">
+                                    <li><a href="shop.html">Vegetable</a></li>
+                                    <li><a href="shop.html">Fruit</a></li>
+                                    <li><a href="shop.html">Organic Products</a></li>
+                                    <li><a href="shop.html">Dairy Products</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="active" href="about.html">About</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="bottomHeader-cta flex-shrink-0">
+                        <a class="ctaPhone d-flex align-items-center" href="tel:2195550114">
+                            <iconify-icon icon="ph:phone-call-light" width="28" height="28"></iconify-icon>
+                            (219) 555-0114
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mblHeader d-lg-none">
+            <div class="container">
+                <div class="mblHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
+                    <div class="mblHeader-toggle flex-shrink-0">
+                        <a class="text-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor" d="M3 4h18v2H3zm0 7h12v2H3zm0 7h18v2H3z" />
+                            </svg>
+                        </a>
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                            aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                                    <a href="index.html"><img src="assets/images/logo.svg" alt="Ecobazar"></a>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li>
+                                        <a class="text-dark" href="shop.html">Shop
+                                            <span class="arrow"><iconify-icon icon="iconoir:nav-arrow-down" width="22"
+                                                    height="22"></iconify-icon></span>
+                                            <ul class="submenu">
+                                                <li><a href="shop.html">Vegetable</a></li>
+                                                <li><a href="shop.html">Fruit</a></li>
+                                                <li><a href="shop.html">Organic Products</a></li>
+                                                <li><a href="shop.html">Dairy Products</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mblHeaderLogo flex-shrink-0"><a href="index.html"><img src="assets/images/logo.svg"
+                                alt=""></a></div>
+                    <div class="mblHeader-actions flex-shrink-0">
+                        <ul class="quickLinks mb-0">
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                        viewBox="0 0 14 14">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M7 3.183C3.98-.522.792 2.111.75 4.949C.75 9.173 5.805 12.64 7 12.64s6.25-3.468 6.25-7.692C13.208 2.11 10.02-.522 7 3.183"
+                                            stroke-width="1" />
+                                    </svg></a></li>
+                            <li><a href="#" class="shoppingCart">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="1.5"
+                                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007M8.625 10.5a.375.375 0 1 1-.75 0a.375.375 0 0 1 .75 0m7.5 0a.375.375 0 1 1-.75 0a.375.375 0 0 1 .75 0" />
+                                        </svg>
+                                        <div class="count">2</div>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         ১. ব্রেডক্রাম্ব / টাইটেল ব্যানার সেকশন
+         ========================================================================= -->
+    <section class="about-breadcrumb-banner">
+        <div class="container">
+            <div class="about-breadcrumb-inner d-flex  align-items-center text-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb about-breadcrumb mb-2 justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="#">About Us</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         ২. হিরো স্টোরি ব্লক সেকশন (অল্টারনেটিং লেআউট)
+         ========================================================================= -->
+    <section class="about-hero-story py-5 my-4">
+        <div class="container">
+
+            <!-- ব্লক ১: টেক্সট বামে, ইমেজ ডানে -->
+            <div class="row align-items-center g-4 g-lg-5 mb-5 pb-lg-3">
+                <div class="col-lg-6 col-12">
+                    <h2 class="about-section-title fw-bold fs-1 mb-4">100% Trusted <br> Organic Food Store</h2>
+                    <p class="about-body-text text-muted mb-3">Morbi porttitor ligula in nunc varius sagittis.
+                        Proin dui nisi, laoreet ut tempor ac, cursus vitae eros. Cras quis ultricies elit.
+                        Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan.
+                        Donec a eros non massa vulputate ornare.
+                        Vivamus ornare commodo ante, at commodo felis congue vitae.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="about-img-frame rounded overflow-hidden">
+                        <img src="assets/images/About/Image.png" alt="Organic farmer with fresh produce"
+                            class="img-fluid about-story-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ব্লক ২: ইমেজ বামে, টেক্সট + ফিচার গ্রিড ডানে -->
+            <div class="row align-items-center about-background-img g-4 g-lg-5 mb-5 pb-lg-3">
+                <div class="col-lg-6 col-12 order-lg-1 order-2">
+                    <div class="about-img-frame rounded overflow-hidden">
+                        <img src="assets/images/About/Image (1).png" alt="Fresh organic vegetables basket"
+                            class="img-fluid about-story-img about-hero-person-img">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 order-lg-2 order-1">
+                    <h2 class="about-section-title fs-1 fw-bold mb-4">100% Trusted <br> Organic Food Store</h2>
+                    <p class="about-body-text text-muted mb-4">Pellentesque a ante vulputate leo porttitor luctus sed
+                        eget eros. Morbi a metus. Phasellus enim erat, varius in, imperdiet quis, euismod viverra
+                        nullas.</p>
+                    <div class="row row-cols-1 row-cols-sm-2 g-4 about-features-mini">
+                        <div class="col">
+                            <div class="about-feature-item d-flex align-items-start gap-3">
+                                <span class="about-feature-icon flex-shrink-0"><i class="fa-solid fa-leaf"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-1">100% Organic Foods</h6>
+                                    <p class="small text-muted mb-0">Pure and healthy food for your family</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-feature-item d-flex align-items-start gap-3">
+                                <span class="about-feature-icon flex-shrink-0"><i
+                                        class="fa-solid fa-headset"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Great Support 24/7</h6>
+                                    <p class="small text-muted mb-0">Instant access to expert support</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-feature-item d-flex align-items-start gap-3">
+                                <span class="about-feature-icon flex-shrink-0"><i
+                                        class="fa-solid fa-thumbs-up"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Customer Feedback</h6>
+                                    <p class="small text-muted mb-0">Our happy customers always satisfied</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-feature-item d-flex align-items-start gap-3">
+                                <span class="about-feature-icon flex-shrink-0"><i
+                                        class="fa-solid fa-truck-fast"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Free Shipping</h6>
+                                    <p class="small text-muted mb-0">Free shipping with discount</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-feature-item d-flex align-items-start gap-3">
+                                <span class="about-feature-icon flex-shrink-0"><i
+                                        class="fa-solid fa-seedling"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Natural Products</h6>
+                                    <p class="small text-muted mb-0">Increase health and well being</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-feature-item d-flex align-items-start gap-3">
+                                <span class="about-feature-icon flex-shrink-0"><i
+                                        class="fa-solid fa-shield-halved"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-1">100% Secure Payment</h6>
+                                    <p class="small text-muted mb-0">We ensure your money is safe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ব্লক ৩: টেক্সট + চেকলিস্ট বামে, ইমেজ ডানে -->
+            <div class="row align-items-center bla g-4 g-lg-5">
+                <div class="col-lg-6 col-12">
+                    <h2 class="about-section-title fw-bold mb-4">We Delivered, You <br> Enjoy Your Order.</h2>
+                    <p class="about-body-text text-muted mb-4">Ut suscipit egestas suscipit. Sed posuere pellentesque
+                        nunc, ultrices consectetur velit dapibus eu. Mauris sollicitudin dignissim diam, ac mattis eros
+                        accumsan rhoncus. Curabitur auctor bibendum nunc eget elementum.</p>
+                    <ul class="about-checklist list-unstyled mb-4">
+                        <li><i class="fa-solid fa-circle-check"></i> Sed in metus pellentesque.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Fusce et ex commodo, aliquam nulla efficitur, tempus lorem.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Maecenas ut nunc fringilla erat varius.</li>
+                    </ul>
+                    <a href="shop.html" class="btn btn-success rounded-pill px-4 py-2 fw-semibold about-shop-btn">
+                        Shop Now <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="about-img-frame rounded overflow-hidden">
+                        <img src="assets/images/About/Image (2).png" alt="Delivery service with fresh groceries"
+                            class="img-fluid about-story-img about-hero-person-img-02">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         ৩. ব্র্যান্ড ফিচার / হাইলাইটস স্ট্রিপ
+         ========================================================================= -->
+    <section class="about-highlights py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="about-highlight-card p-4 h-100 text-center">
+                        <span class="about-highlight-icon d-inline-flex mb-3"><i class="fa-solid fa-leaf"></i></span>
+                        <h6 class="fw-bold mb-2">Organic Foods</h6>
+                        <p class="small text-muted mb-0">100% pure and healthy organic products</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-highlight-card p-4 h-100 text-center">
+                        <span class="about-highlight-icon d-inline-flex mb-3"><i
+                                class="fa-solid fa-truck-fast"></i></span>
+                        <h6 class="fw-bold mb-2">Quick Delivery</h6>
+                        <p class="small text-muted mb-0">Fast and reliable delivery to your door</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-highlight-card p-4 h-100 text-center">
+                        <span class="about-highlight-icon d-inline-flex mb-3"><i class="fa-solid fa-headset"></i></span>
+                        <h6 class="fw-bold mb-2">Great Support</h6>
+                        <p class="small text-muted mb-0">Customer support available 24/7</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-highlight-card p-4 h-100 text-center">
+                        <span class="about-highlight-icon d-inline-flex mb-3"><i
+                                class="fa-solid fa-shield-halved"></i></span>
+                        <h6 class="fw-bold mb-2">100% Safe Payment</h6>
+                        <p class="small text-muted mb-0">Secure and trusted payment methods</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         ৪. টিম ও লিডারশিপ শোকেস সেকশন
+         ========================================================================= -->
+    <section class="about-team-section py-5 my-4">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="about-section-title fw-bold mb-2">Our Awesome Team</h2>
+                <p class="text-muted about-body-text mb-0">Pellentesque a ante vulputate leo porttitor luctus sed eget
+                    eros. Morbi a metus.</p>
+            </div>
+
+            <div class="about-team-slider position-relative">
+                <button class="about-team-nav about-team-prev d-none d-md-flex" type="button"
+                    aria-label="Previous team member">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="about-team-scroll">
+                    <div
+                        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 about-team-grid flex-nowrap flex-lg-wrap">
+                        <div class="col">
+                            <div class="about-team-card position-relative overflow-hidden rounded">
+                                <div class="about-team-img-wrap">
+                                    <img src="assets/images/About/Social (1).png" alt="Jenny Wilson"
+                                        class="img-fluid about-team-img">
+                                </div>
+                                <div class="about-team-info p-3 text-center">
+                                    <h6 class="fw-bold mb-1">Jenny Wilson</h6>
+                                    <p class="small text-muted mb-0">Ceo &amp; Founder</p>
+                                </div>
+                                <div class="about-team-overlay d-flex align-items-center justify-content-center gap-2">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-team-card position-relative overflow-hidden rounded">
+                                <div class="about-team-img-wrap">
+                                    <img src="./assets/images/About/Social (2).png" alt="Kristin Watson"
+                                        class="img-fluid about-team-img">
+                                </div>
+                                <div class="about-team-info p-3 text-center">
+                                    <h6 class="fw-bold mb-1">Kristin Watson</h6>
+                                    <p class="small text-muted mb-0">Vice President</p>
+                                </div>
+                                <div class="about-team-overlay d-flex align-items-center justify-content-center gap-2">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-team-card position-relative overflow-hidden rounded">
+                                <div class="about-team-img-wrap">
+                                    <img src="assets/images/About/Social (3).png" alt="Eleanor Pena"
+                                        class="img-fluid about-team-img">
+                                </div>
+                                <div class="about-team-info p-3 text-center">
+                                    <h6 class="fw-bold mb-1">Eleanor Pena</h6>
+                                    <p class="small text-muted mb-0">Head of Technology</p>
+                                </div>
+                                <div class="about-team-overlay d-flex align-items-center justify-content-center gap-2">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-team-card position-relative overflow-hidden rounded">
+                                <div class="about-team-img-wrap">
+                                    <img src="assets/images/About/Social (4).png" alt="Robert Fox"
+                                        class="img-fluid about-team-img">
+                                </div>
+                                <div class="about-team-info p-3 text-center">
+                                    <h6 class="fw-bold mb-1">Robert Fox</h6>
+                                    <p class="small text-muted mb-0">Customer Care</p>
+                                </div>
+                                <div class="about-team-overlay d-flex align-items-center justify-content-center gap-2">
+                                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="about-team-nav about-team-next d-none d-md-flex" type="button"
+                    aria-label="Next team member">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         ৫. ক্লায়েন্ট টেস্টিমোনিয়াল / ফিডব্যাক স্লাইডার সেকশন
+         ========================================================================= -->
+    <section class="about-testimonial-section py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+                <h2 class="about-section-title fw-bold mb-0">Client Testimonial</h2>
+                <div class="about-carousel-controls d-flex gap-2 flex-shrink-0">
+                    <button class="about-carousel-btn" type="button" data-bs-target="#aboutTestimonialCarousel"
+                        data-bs-slide="prev" aria-label="Previous testimonial">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="about-carousel-btn" type="button" data-bs-target="#aboutTestimonialCarousel"
+                        data-bs-slide="next" aria-label="Next testimonial">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="aboutTestimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card testimonial-card about-testimonial-card border-0 p-4 shadow-sm h-100">
+                                    <div class="quote-icon-box mb-3"><i class="fa-solid fa-quote-left fs-1"></i></div>
+                                    <p class="text-muted review-text mb-4">"Pellentesque eu nibh eget mauris congue
+                                        mattis mattis nec tellus. Phasellus imperdiet elit eu magna."</p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="testimonial-img-box">
+                                                <img src="assets/images/client.png" alt="Robert Fox"
+                                                    class="customer-img">
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0 text-dark">Robert Fox</h6>
+                                                <small class="text-muted">Customer</small>
+                                            </div>
+                                        </div>
+                                        <div class="review-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card testimonial-card about-testimonial-card border-0 p-4 shadow-sm h-100">
+                                    <div class="quote-icon-box mb-3"><i class="fa-solid fa-quote-left fs-1"></i></div>
+                                    <p class="text-muted review-text mb-4">"Pellentesque eu nibh eget mauris congue
+                                        mattis mattis nec tellus. Phasellus imperdiet elit eu magna."</p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="testimonial-img-box">
+                                                <img src="assets/images/client (1).png" alt="Dianne Russell"
+                                                    class="customer-img">
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0 text-dark">Dianne Russell</h6>
+                                                <small class="text-muted">Customer</small>
+                                            </div>
+                                        </div>
+                                        <div class="review-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card testimonial-card about-testimonial-card border-0 p-4 shadow-sm h-100">
+                                    <div class="quote-icon-box mb-3"><i class="fa-solid fa-quote-left fs-1"></i></div>
+                                    <p class="text-muted review-text mb-4">"Pellentesque eu nibh eget mauris congue
+                                        mattis mattis nec tellus. Phasellus imperdiet elit eu magna."</p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="testimonial-img-box">
+                                                <img src="assets/images/client (2).png" alt="Eleanor Pena"
+                                                    class="customer-img">
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0 text-dark">Eleanor Pena</h6>
+                                                <small class="text-muted">Customer</small>
+                                            </div>
+                                        </div>
+                                        <div class="review-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card testimonial-card about-testimonial-card border-0 p-4 shadow-sm h-100">
+                                    <div class="quote-icon-box mb-3"><i class="fa-solid fa-quote-left fs-1"></i></div>
+                                    <p class="text-muted review-text mb-4">"Ut suscipit neque sed urna fermentum, vitae
+                                        sollicitudin orci egestas. Aliquam at placerat orci."</p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="testimonial-img-box">
+                                                <img src="assets/images/client (1).png" alt="Kristin Watson"
+                                                    class="customer-img">
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0 text-dark">Kristin Watson</h6>
+                                                <small class="text-muted">Customer</small>
+                                            </div>
+                                        </div>
+                                        <div class="review-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-regular fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card testimonial-card about-testimonial-card border-0 p-4 shadow-sm h-100">
+                                    <div class="quote-icon-box mb-3"><i class="fa-solid fa-quote-left fs-1"></i></div>
+                                    <p class="text-muted review-text mb-4">"Morbi porttitor ligula in nunc varius
+                                        sagittis. Proin dui felis, vehicula a faucibus at, tincidunt eu purus."</p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="testimonial-img-box">
+                                                <img src="assets/images/client (2).png" alt="Jenny Wilson"
+                                                    class="customer-img">
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0 text-dark">Jenny Wilson</h6>
+                                                <small class="text-muted">Customer</small>
+                                            </div>
+                                        </div>
+                                        <div class="review-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card testimonial-card about-testimonial-card border-0 p-4 shadow-sm h-100">
+                                    <div class="quote-icon-box mb-3"><i class="fa-solid fa-quote-left fs-1"></i></div>
+                                    <p class="text-muted review-text mb-4">"Donec aliquet, odio ut auctor facilisis,
+                                        felis elit pretium metus, id commodo quam ante et purus."</p>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="testimonial-img-box">
+                                                <img src="assets/images/client.png" alt="Robert Fox"
+                                                    class="customer-img">
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold mb-0 text-dark">Robert Fox</h6>
+                                                <small class="text-muted">Customer</small>
+                                            </div>
+                                        </div>
+                                        <div class="review-stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         ৬. পার্টনার ব্র্যান্ড লোগো রিবন সেকশন
+         ========================================================================= -->
+    <section class="about-partners py-5">
+        <div class="container">
+            <div class="about-partners-ribbon d-flex align-items-center justify-content-between flex-nowrap gap-3">
+                <div class="about-partner-logo flex-shrink-0">
+                    <img src="assets/images/About/Vector.png" alt="Partner brand 1" class="img-fluid">
+                </div>
+                <div class="about-partner-divider flex-shrink-0"></div>
+                <div class="about-partner-logo flex-shrink-0">
+                    <img src="assets/images/About/mango-1.png" alt="Partner brand 2" class="img-fluid">
+                </div>
+                <div class="about-partner-divider flex-shrink-0"></div>
+                <div class="about-partner-logo flex-shrink-0">
+                    <img src="assets/images/About/Group.png" alt="Partner brand 3" class="img-fluid">
+                </div>
+                <div class="about-partner-divider flex-shrink-0"></div>
+                <div class="about-partner-logo flex-shrink-0">
+                    <img src="assets/images/About/food.png" alt="Partner brand 4" class="img-fluid">
+                </div>
+                <div class="about-partner-divider flex-shrink-0"></div>
+                <div class="about-partner-logo flex-shrink-0">
+                    <img src="assets/images/About/bookoff-corporation-logo.png" alt="Partner brand 5" class="img-fluid">
+                </div>
+                <div class="about-partner-divider flex-shrink-0"></div>
+                <div class="about-partner-logo flex-shrink-0">
+                    <img src="assets/images/About/Group (1).png" alt="Partner brand 6" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         ফুটার সেকশন (index.html থেকে ইনহেরিট)
+         ========================================================================= -->
+    <footer class="main-footer">
+        <div class="newsletter-bar py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-5 text-center text-lg-start">
+                        <h3 class="fw-bold text-dark mb-2">Subcribe our Newsletter</h3>
+                        <p class="text-muted small mb-0">Pellentesque eu nibh eget mauris congue mattis mattis nec
+                            tellus. Phasellus imperdiet elit eu magna.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <form class="newsletter-form position-relative">
+                            <input type="email" class="form-control rounded-pill py-3 pe-5"
+                                placeholder="Your email address" required>
+                            <button type="submit"
+                                class="btn btn-success subscribe-btn rounded-pill px-4 position-absolute top-50 end-0 translate-middle-y m-1">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 text-center text-lg-end">
+                        <div class="social-links d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="#" class="social-icon fb"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content py-5 text-secondary">
+            <div class="container">
+                <div class="footer-columns-inner row g-4 flex-lg-nowrap">
+                    <div class="col-md-6 col-lg-3 footer-col flex-shrink-0 text-center text-md-start">
+                        <div class="footer-logo-wrapper mb-3">
+                            <a href="index.html" class="d-inline-block">
+                                <img src="assets/images/Logo.png" alt="Ecobazar Logo" class="footer-brand-logo">
+                            </a>
+                        </div>
+                        <p class="small mb-4">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui,
+                            eget bibendum magna congue nec.</p>
+                        <div
+                            class="contact-info d-flex flex-nowrap justify-content-center justify-content-md-start align-items-center gap-2 small">
+                            <a href="tel:2195550114"
+                                class="text-white text-decoration-none border-bottom border-success pb-1">(219)
+                                555-0114</a>
+                            <span class="text-muted">or</span>
+                            <a href="mailto:Proxy@gmail.com"
+                                class="text-white text-decoration-none border-bottom border-success pb-1">Proxy@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-2 ms-lg-auto footer-col footer-title flex-shrink-0">
+                        <h6 class="text-white fw-bold mb-3">My Account</h6>
+                        <ul class="list-unstyled footer-links small">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order History</a></li>
+                            <li><a href="#">Shoping Cart</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
+                        <h6 class="text-white fw-bold mb-3">Helps</h6>
+                        <ul class="list-unstyled footer-links small">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Faqs</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
+                        <h6 class="text-white fw-bold mb-3">Proxy</h6>
+                        <ul class="list-unstyled footer-links small">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Track Order</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
+                        <h6 class="text-white fw-bold mb-3">Categories</h6>
+                        <ul class="list-unstyled footer-links small">
+                            <li><a href="#">Fruit & Vegetables</a></li>
+                            <li><a href="#">Meat & Fish</a></li>
+                            <li><a href="#">Bread & Bakery</a></li>
+                            <li><a href="#">Beauty & Health</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="border-secondary my-4 opacity-25">
+                <div
+                    class="footer-bottom-inner d-flex flex-column flex-md-row justify-content-between align-items-center flex-md-nowrap gap-3 pt-2">
+                    <p class="small mb-0">Ecobazar eCommerce © 2021. All Rights Reserved</p>
+                    <div class="payment-methods d-flex gap-2">
+                        <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i
+                                class="fa-brands fa-apple-pay fs-5"></i></span>
+                        <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i
+                                class="fa-brands fa-cc-visa fs-5"></i></span>
+                        <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i
+                                class="fa-brands fa-cc-mastercard fs-5"></i></span>
+                        <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i
+                                class="fa-solid fa-shield-halved fs-5 me-1"></i> Secure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <script src="./assets/js/about.js"></script>
+</body>
+
+</html>

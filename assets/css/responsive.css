@@ -1,0 +1,724 @@
+/* =========================================================================
+   HEADER & FOOTER — zoom/scaling স্থিতিশীলতা (desktop lg+ viewport)
+   ========================================================================= */
+@media (min-width: 992px) {
+
+    /* সব header sub-section wrapper — nowrap বজায় রাখে */
+    .topHeader-inner,
+    .mainHeader-inner,
+    .bottomHeader-inner,
+    .footer-columns-inner,
+    .footer-bottom-inner {
+        flex-wrap: nowrap !important;
+    }
+
+    /* টপ বার — location, selects, sign-in shrink/wrap নিষিদ্ধ */
+    .topHeader-location,
+    .topHeader-utils,
+    .topHeader-utils form,
+    .topHeader-signin,
+    header .topHeader .location {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    /* মেইন হেডার — logo, search, cart utilities */
+    .mainHeader-logo,
+    .mainHeader-search,
+    .mainHeader-utils,
+    .mainHeader form,
+    .mainHeader form input,
+    .mainHeader button,
+    .quickLinks,
+    .quickLinks li,
+    .quickLinks li a,
+    a.shoppingCart,
+    a.shoppingCart .cnt p,
+    a.shoppingCart .cnt h4 {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .quickLinks {
+        flex-wrap: nowrap !important;
+    }
+
+    /* বটম নেভ — menu links ও hotline */
+    .bottomHeader-nav,
+    .bottomHeader-cta,
+    .primaryMenu,
+    .primaryMenu li,
+    .primaryMenu a,
+    .bottomHeader .ctaPhone {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .primaryMenu {
+        flex-wrap: nowrap !important;
+    }
+
+    /* ফুটার — কলাম, লিংক, copyright, payment */
+    .footer-col,
+    .footer-title,
+    .footer-title h6,
+    .footer-links li a,
+    .contact-info,
+    .contact-info a,
+    .footer-bottom-inner p,
+    .payment-methods,
+    .payment-methods .badge {
+        flex-shrink: 0 !important;
+    }
+
+    .footer-title h6,
+    .footer-links li a,
+    .footer-bottom-inner p {
+        white-space: nowrap !important;
+    }
+
+    .footer-columns-inner {
+        flex-wrap: nowrap !important;
+    }
+
+    /* নিউজলেটার — শুধু desktop zoom-এ nowrap (মোবাইলে Bootstrap stack অপরিবর্তিত) */
+    .newsletter-bar .row {
+        flex-wrap: nowrap;
+    }
+
+    .newsletter-bar .col-lg-5,
+    .newsletter-bar .col-lg-2 {
+        flex-shrink: 0;
+    }
+
+    .newsletter-bar h3 {
+        white-space: nowrap;
+    }
+}
+
+
+/* কাস্টম বর্ডার রেসপন্সিভনেসের জন্য */
+@media (min-width: 768px) {
+    .border-start-md {
+        border-left: 1px solid #dee2e6 !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .quickLinks {
+        flex-wrap: nowrap;
+    }
+
+    .quickLinks li {
+        padding: 0 6px;
+        border-right: 1px solid var(--gray-scale-gray-–-200);
+        flex-shrink: 0;
+    }
+
+    .mblHeader-inner {
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .mblHeaderLogo img {
+        max-width: 160px;
+    }
+}
+
+
+/* =========================================================================
+   MOBILE RESPONSIVENESS (মোবাইল ভিউর জন্য অতিরিক্ত কাস্টমাইজেশন)
+   ========================================================================= */
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem !important;
+        /* মোবাইলে বড় ফন্ট সাইজ ছোট করা হয়েছে */
+    }
+
+    .main-banner-box {
+        padding: 2rem !important;
+        min-height: 280px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-banner-box {
+        min-height: 320px !important;
+        background-position: right 15% center !important;
+    }
+
+    .text-container-fix {
+        max-width: 80% !important;
+    }
+
+    .main-banner-box h1 {
+        font-size: 24px !important;
+    }
+}
+
+/* =========================================================================
+   PRODUCTS RESPONSIVE (মোবাইল স্ক্রিনের জন্য অ্যাডজাস্টমেন্ট)
+   ========================================================================= */
+@media (max-width: 576px) {
+    .product-img-box {
+        height: 130px;
+        /* মোবাইলে স্ক্রিন ছোট তাই বক্সের হাইট কিছুটা কমানো হলো */
+        padding: 5px;
+    }
+
+    .product-card .card-body p {
+        font-size: 0.8rem;
+        /* মোবাইলে প্রোডাক্টের নাম একটু ছোট দেখাবে */
+    }
+
+    .cart-btn {
+        font-size: 0.75rem;
+        /* মোবাইলে বাটনের টেক্সট ফিট করার জন্য */
+        padding: 4px 8px;
+    }
+}
+
+/* =========================================================================
+   PROMO BANNERS MOBILE VIEW (মোবাইলে ব্যানারগুলোর সাইজ মানানসই করার জন্য)
+   ========================================================================= */
+@media (max-width: 576px) {
+
+    .promo-banner-1,
+    .promo-banner-2,
+    .promo-banner-3 {
+        min-height: 300px;
+        /* মোবাইলের ছোট স্ক্রিনে হাইট কিছুটা কমিয়ে সুন্দর করা হলো */
+        padding: 1.5rem !important;
+    }
+}
+
+/* =========================================================================
+   HOT DEALS মোবাইল রেসপন্সিভ মিডিয়া কোয়েরি
+   ========================================================================= */
+@media (max-width: 767px) {
+    .main-deal-box {
+        /* border-end: none !important; */
+        border-bottom: 2px solid #2C742F !important;
+    }
+
+    .product-img-box {
+        height: 110px;
+    }
+}
+
+/* =========================================================================
+   WIDE BANNER RESPONSIVE (মোবাইল ও ট্যাবলেট ভিউ)
+   ========================================================================= */
+@media (max-width: 768px) {
+    .wide-discount-banner {
+        min-height: 280px;
+        /* ছোট স্ক্রিনে হাইট কিছুটা কমানো হলো */
+        padding: 2.5rem 1.5rem !important;
+        /* মোবাইলে ভেতরের স্পেসিং অ্যাডজাস্টমেন্ট */
+
+        /* ট্রিক: মোবাইলে যদি ব্যাকগ্রাউন্ড ইমেজের কারণে লেখা পড়তে সমস্যা হয়, 
+           তাহলে নিচের ডার্ক ওভারলে লাইনটি সচল (Uncomment) করে দিতে পারেন */
+        /* background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./assets/images/banners/wide-banner-bg.png'); */
+    }
+
+    .wideBanner2 {
+        padding: 0 0 15px 0;
+    }
+
+    .wideBanner {
+        padding: 0;
+    }
+}
+
+/* =========================================================================
+   FOOTER RESPONSIVE (মোবাইল ভিউ অ্যাডজাস্টমেন্ট)
+   ========================================================================= */
+@media (max-width: 991px) {
+    .newsletter-form .form-control {
+        height: 50px;
+    }
+
+    .subscribe-btn {
+        height: 42px;
+        font-size: 0.85rem;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-title {
+        margin-left: 60px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+/* =========================================================================
+   SHOP PAGE — রেসপন্সিভ স্টাইল
+   ========================================================================= */
+@media (max-width: 991px) {
+    .shop-total-results {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-top: 8px;
+    }
+
+    .active-filters-row {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-breadcrumb-banner {
+        min-height: 120px;
+        background-position: center;
+    }
+
+    .shop-page-title {
+        font-size: 1.5rem;
+    }
+
+    .shop-control-bar {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .shop-product-card .product-img-box {
+        height: 130px;
+        padding: 5px;
+    }
+
+    .shop-pagination .shop-page-link {
+        width: 34px;
+        height: 34px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* =========================================================================
+   ABOUT PAGE — রেসপন্সিভ স্টাইল
+   ========================================================================= */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-team-grid {
+        flex-wrap: nowrap !important;
+    }
+
+    .about-team-grid>.col {
+        flex: 0 0 auto;
+        width: 260px;
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-section-title {
+        font-size: 1.65rem;
+    }
+
+    .about-team-slider {
+        padding: 0;
+    }
+
+    .about-partners-ribbon {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px !important;
+    }
+
+    .about-partner-divider {
+        display: none;
+    }
+
+    .about-partner-logo {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-breadcrumb-banner {
+        min-height: 160px;
+    }
+
+    .about-page-title {
+        font-size: 1.75rem;
+    }
+
+    .about-breadcrumb-inner {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section-title {
+        font-size: 1.4rem;
+    }
+
+    .about-body-text {
+        font-size: 0.875rem;
+    }
+
+    .about-feature-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .about-highlight-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.25rem;
+    }
+
+    .about-carousel-controls {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ABOUT PAGE — desktop zoom সুরক্ষা (lg+) */
+@media (min-width: 992px) {
+
+    .about-partners-ribbon,
+    .about-feature-item,
+    .about-carousel-controls {
+        flex-wrap: nowrap !important;
+    }
+
+    .about-partner-logo,
+    .about-partner-divider,
+    .about-feature-icon,
+    .about-carousel-btn {
+        flex-shrink: 0 !important;
+    }
+
+    .about-partner-logo img {
+        white-space: nowrap;
+    }
+}
+
+/* ======================================
+শপ লেআউট মোবাইল স্পেসিং উন্নতি
+====================================== */
+@media (max-width: 991px) {
+    .shop-breadcrumb-banner+.container {
+        margin-top: 28px !important;
+        margin-bottom: 36px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .active-filters-row {
+        gap: 8px !important;
+    }
+
+    .active-filters-row .shop-total-results {
+        order: 5;
+    }
+}
+
+/* ======================================
+মোবাইল হেডার ওভারফ্লো নিয়ন্ত্রণ
+====================================== */
+@media (max-width: 576px) {
+    .topHeader-inner {
+        overflow: hidden;
+    }
+
+    .topHeader-location,
+    header .topHeader .location {
+        min-width: 0;
+        max-width: 100%;
+        flex-shrink: 1 !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/* ======================================
+মোবাইল ফুটার টেক্সট ওভারফ্লো ঠিক করা
+====================================== */
+@media (max-width: 576px) {
+    .footer-bottom-inner p {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+/* ======================================
+ট্যাবলেট শপ গ্রিড ও কন্ট্রোল বার
+====================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    #shopProductGrid {
+        --bs-gutter-x: 18px;
+        --bs-gutter-y: 18px;
+    }
+
+    .shop-filter-trigger {
+        max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ======================================
+মোবাইল রেসপন্সিভ অ্যাডজাস্টমেন্ট
+====================================== */
+@media (max-width: 768px) {
+    .shop-control-bar {
+        gap: 12px !important;
+        padding: 12px;
+        border: 1px solid var(--gray-scale-gray-â€“-100);
+        border-radius: 8px;
+        background: var(--gray-scale-white);
+    }
+
+    .shop-control-bar>div {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px !important;
+    }
+
+    .shop-select-wrap {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .shop-select-wrap label {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .shop-select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .active-filter-badge {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .shop-filter-trigger {
+        height: 42px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ======================================
+মোবাইল প্রোডাক্ট গ্রিড (২ কলাম)
+====================================== */
+@media (max-width: 575.98px) {
+    #shopProductGrid {
+        --bs-gutter-x: 10px;
+        --bs-gutter-y: 12px;
+    }
+
+    #shopProductGrid>.col {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+/* ======================================
+প্রোডাক্ট কার্ড সাইজ অপ্টিমাইজেশন
+====================================== */
+@media (max-width: 576px) {
+    .shop-product-card {
+        padding: 8px !important;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+    }
+
+    .shop-product-card .product-img-box {
+        height: 108px;
+        padding: 6px;
+        margin-bottom: 8px !important;
+        border-radius: 6px;
+    }
+
+    .shop-product-card .product-main-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .shop-product-card .card-body h6 {
+        font-size: 0.76rem;
+        margin-bottom: 6px !important;
+    }
+
+    .shop-product-card .card-body .fw-bold {
+        font-size: 0.84rem;
+        line-height: 1.25;
+    }
+
+    .shop-product-card .card-body .text-decoration-line-through {
+        display: block;
+        font-size: 0.68rem;
+        margin-top: 1px;
+    }
+
+    .shop-product-card .text-warning {
+        font-size: 0.68rem !important;
+        letter-spacing: 0;
+        margin-top: 6px !important;
+    }
+
+    .shop-product-card .cart-icon-btn {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        font-size: 0.75rem;
+    }
+
+    .shop-card-actions {
+        top: 7px;
+        right: 7px;
+        gap: 4px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .shop-card-actions .btn-action {
+        width: 28px;
+        height: 28px;
+        font-size: 0.72rem;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.92);
+    }
+
+    .shop-product-card .badge {
+        font-size: 0.62rem;
+        padding: 4px 6px;
+        margin: 6px !important;
+    }
+}
+
+/* ======================================
+৩২০px স্ক্রিনের জন্য কার্ড ও স্পেসিং ফাইন-টিউন
+====================================== */
+@media (max-width: 360px) {
+    #shopProductGrid {
+        --bs-gutter-x: 8px;
+        --bs-gutter-y: 10px;
+    }
+
+    .shop-product-card {
+        padding: 7px !important;
+    }
+
+    .shop-product-card .product-img-box {
+        height: 96px;
+        padding: 5px;
+    }
+
+    .shop-product-card .card-body h6 {
+        font-size: 0.72rem;
+    }
+
+    .shop-product-card .card-body .fw-bold {
+        font-size: 0.78rem;
+    }
+
+    .shop-product-card .cart-icon-btn {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    .shop-pagination .pagination {
+        gap: 2px !important;
+        flex-wrap: nowrap;
+    }
+
+    .shop-pagination .shop-page-link {
+        width: 28px;
+        height: 28px;
+        font-size: 0.72rem;
+    }
+
+    .shop-control-bar>div {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+}
+
+
+/* =========================================================================
+   BLOG PAGE RESPONSIVE — মোবাইল এবং ট্যাবলেট ভিউ অ্যাডজাস্টমেন্ট
+   ========================================================================= */
+
+@media (max-width: 991px) {
+
+    /* ট্যাবলেটে ব্লগ কন্টেন্ট এরিয়া অর্ডারিং ঠিক করা যেন গ্রেড উপরে থাকে */
+    .blog-main-layout .col-lg-4 {
+        margin-top: 2rem;
+    }
+
+    .blog-img-box {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 1.125rem;
+    }
+
+    .blog-card-body {
+        padding: 1.25rem !important;
+    }
+
+    .blog-img-box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    #blogPostGrid .col-md-6 {
+        width: 100%;
+    }
+
+    .blog-img-box {
+        height: 180px;
+    }
+
+    .blog-meta-info {
+        gap: 12px !important;
+        font-size: 0.75rem;
+    }
+}
+
+/* ৩২০px থেকে ৩৬০px আল্ট্রা মোবাইল ডিভাইসের জন্য স্পেসিং রিডাকশন */
+@media (max-width: 360px) {
+    .blog-card-body {
+        padding: 1rem !important;
+    }
+
+    .blog-title {
+        font-size: 1rem;
+    }
+
+    .pagination-custom .page-link {
+        width: 34px;
+        height: 34px;
+        font-size: 0.8rem;
+    }
+}
