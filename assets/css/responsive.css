@@ -722,3 +722,149 @@
         font-size: 0.8rem;
     }
 }
+
+/* =========================================================================
+   CONTACT PAGE RESPONSIVE — মোবাইল এবং ট্যাবলেট ভিউ অ্যাডজাস্টমেন্ট
+   ========================================================================= */
+
+/* ট্যাবলেট ভিউ (768px - 991px): কার্ডের প্যাডিং কিছুটা কমানো */
+@media (max-width: 991px) {
+    .contact-breadcrumb-banner {
+        min-height: 100px;
+    }
+
+    .contact-breadcrumb-inner {
+        min-height: 100px;
+    }
+
+    .contact-form-card {
+        padding: 32px 28px;
+    }
+}
+
+/* ট্যাবলেট পোর্ট্রেট (768px): ইনফো আইটেম সারিবদ্ধ করা */
+@media (max-width: 768px) {
+    .contact-breadcrumb-banner {
+        min-height: 90px;
+        background-position: center;
+    }
+
+    .contact-breadcrumb-inner {
+        min-height: 90px;
+    }
+
+    /* ম্যাপ উচ্চতা মোবাইলে কিছুটা কমানো */
+    .contact-map-section iframe {
+        height: 300px;
+    }
+
+    .contact-form-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* মোবাইল ভিউ (576px এবং নিচে): সম্পূর্ণ স্ট্যাকড লেআউট */
+@media (max-width: 576px) {
+
+    /* ইনফো কার্ড প্যাডিং কমানো */
+    .contact-info-card {
+        padding: 24px 20px;
+    }
+
+    /* ফর্ম কার্ড প্যাডিং কমানো */
+    .contact-form-card {
+        padding: 24px 20px;
+    }
+
+    .contact-form-title {
+        font-size: 1.35rem;
+    }
+
+    .contact-form-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    /* ইনপুট উচ্চতা টাচ-ফ্রেন্ডলি রাখা */
+    .contact-input {
+        height: 48px;
+        font-size: 0.875rem;
+    }
+
+    /* সাবমিট বাটন মোবাইলে ফুল-উইডথ */
+    .contact-submit-btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+
+    /* ম্যাপ আরও ছোট মোবাইলে */
+    .contact-map-section iframe {
+        height: 250px;
+    }
+}
+
+/* ছোট মোবাইল (425px): আইকন ও স্পেসিং অপ্টিমাইজেশন */
+@media (max-width: 425px) {
+    .contact-icon-wrap {
+        width: 48px;
+        height: 48px;
+    }
+
+    .contact-info-item {
+        padding: 20px 0;
+    }
+
+    .contact-info-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* আল্ট্রা স্মল মোবাইল (375px এবং নিচে) */
+@media (max-width: 375px) {
+    .contact-info-card {
+        padding: 20px 16px;
+    }
+
+    .contact-form-card {
+        padding: 20px 16px;
+    }
+
+    .contact-form-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* ৩২০px — সবচেয়ে ছোট সাপোর্টেড স্ক্রিন */
+@media (max-width: 320px) {
+    .contact-input {
+        height: 44px;
+        padding: 0 12px;
+    }
+
+    .contact-textarea {
+        padding: 10px 12px;
+    }
+
+    .contact-submit-btn {
+        font-size: 0.85rem;
+        padding: 12px 20px;
+    }
+}
+
+/* ======================================
+   CONTACT PAGE — desktop zoom সুরক্ষা (lg+)
+   ফর্ম ও কার্ড zoom-এ overflow/wrap রোধ
+====================================== */
+@media (min-width: 992px) {
+
+    .contact-info-card,
+    .contact-form-card {
+        flex-shrink: 0;
+    }
+
+    .contact-submit-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+}

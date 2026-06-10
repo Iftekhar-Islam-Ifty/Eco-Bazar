@@ -2191,3 +2191,237 @@ a.shoppingCart .cnt h4 {
     font-size: 0.75rem;
     margin-top: 2px;
 }
+
+/* =========================================================================
+   CONTACT PAGE — ব্রেডক্রাম্ব ব্যানার সেকশন
+   পেজ শিরোনাম এবং নেভিগেশন ট্র্যাক দেখানোর জন্য ডার্ক ব্যানার
+   ========================================================================= */
+.contact-breadcrumb-banner {
+    background-color: #1a1a1a;
+    background-image: url('../images/Breadcrumbs.png');
+    background-size: cover;
+    background-position: center right;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-scale-gray-–-100);
+}
+
+.contact-breadcrumb-inner {
+    min-height: 120px;
+}
+
+/* ব্রেডক্রাম্ব লিংক ও সেপারেটর স্টাইলিং */
+.contact-breadcrumb {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+.contact-breadcrumb .breadcrumb-item a {
+    color: var(--gray-scale-gray-–-300);
+    transition: color 0.2s ease;
+}
+
+.contact-breadcrumb .breadcrumb-item a:hover {
+    color: var(--branding-success);
+}
+
+.contact-breadcrumb .breadcrumb-item.active {
+    color: var(--gray-scale-white);
+}
+
+.contact-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--gray-scale-gray-–-400);
+}
+
+
+/* =========================================================================
+   CONTACT PAGE — ইনফো কার্ড (ঠিকানা, ইমেইল, ফোন)
+   বাম কলামের সাদা বর্ডার কার্ড — তিনটি তথ্য আইটেম সহ
+   ========================================================================= */
+.contact-info-card {
+    background: var(--gray-scale-white);
+    border: 1px solid var(--gray-scale-gray-–-100);
+    border-radius: 12px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+/* প্রতিটি তথ্য আইটেম — আইকন + টেক্সট পাশাপাশি */
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 0;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* আইকন মোড়ক — গোলাকার সবুজ বর্ডার রিং */
+.contact-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid var(--gren-gray-scale-100);
+    background: var(--gray-scale-white);
+    color: var(--branding-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-info-item:hover .contact-icon-wrap {
+    background-color: var(--branding-success);
+    color: var(--gray-scale-white);
+    border-color: var(--branding-success);
+}
+
+/* টেক্সট এবং লিংক স্টাইলিং */
+.contact-info-text {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--gray-scale-gray-–-600);
+    line-height: 1.7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-info-text a {
+    color: var(--gray-scale-gray-–-600);
+    transition: color 0.2s ease;
+    display: block;
+}
+
+.contact-info-text a:hover {
+    color: var(--branding-success);
+}
+
+/* আইটেমগুলোর মধ্যে বিভাজক রেখা */
+.contact-info-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--gray-scale-gray-–-100);
+}
+
+
+/* =========================================================================
+   CONTACT PAGE — ফর্ম কার্ড ("Just Say Hello!")
+   ডান কলামের সাদা কার্ড — শিরোনাম, সাবটাইটেল এবং ইনপুট ফিল্ড সহ
+   ========================================================================= */
+.contact-form-card {
+    background: var(--gray-scale-white);
+    border: 1px solid var(--gray-scale-gray-–-100);
+    border-radius: 12px;
+    padding: 40px 36px;
+}
+
+/* ফর্ম শিরোনাম */
+.contact-form-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--gray-scale-gray-–-900);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/* ফর্ম সাবটাইটেল / বিবরণ */
+.contact-form-subtitle {
+    font-size: 0.9rem;
+    color: var(--gray-scale-gray-–-500);
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+/* ইনপুট ও টেক্সটএরিয়া ফিল্ড স্টাইলিং */
+.contact-input {
+    height: 50px;
+    border: 1px solid var(--gray-scale-gray-–-200);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--gray-scale-gray-–-700);
+    background-color: var(--gray-scale-white);
+    padding: 0 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-input:focus {
+    border-color: var(--branding-success);
+    box-shadow: 0 0 0 3px rgba(0, 178, 7, 0.1);
+    outline: none;
+}
+
+.contact-input::placeholder {
+    color: var(--gray-scale-gray-–-400);
+    font-size: 0.875rem;
+}
+
+/* টেক্সটএরিয়া — সাবজেক্ট ফিল্ড */
+.contact-textarea {
+    height: auto !important;
+    resize: vertical;
+    padding: 14px 16px;
+    line-height: 1.6;
+}
+
+/* সাবমিট বাটন — ফিগমার গ্রিন পিল বাটন */
+.contact-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 36px;
+    background-color: var(--branding-success);
+    color: var(--gray-scale-white);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+}
+
+.contact-submit-btn:hover {
+    background-color: var(--branding-success-dark);
+    transform: translateY(-1px);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(0);
+}
+
+.contact-submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+    transform: none;
+}
+
+/* Bootstrap is-invalid ওভাররাইড — contact ইনপুটের জন্য */
+.contact-input.is-invalid {
+    border-color: var(--branding-error);
+    box-shadow: 0 0 0 3px rgba(234, 75, 72, 0.1);
+}
+
+
+/* =========================================================================
+   CONTACT PAGE — ম্যাপ সেকশন
+   ফুল-উইডথ গুগল ম্যাপস এমবেড, স্টোরের অবস্থান দেখানো
+   ========================================================================= */
+.contact-map-section {
+    line-height: 0;
+    overflow: hidden;
+}
+
+.contact-map-section iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
