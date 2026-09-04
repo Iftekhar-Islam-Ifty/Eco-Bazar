@@ -14,12 +14,8 @@
 
 <body>
 
-    <!-- =========================================================================
-         হেডার সেকশন (index.html থেকে ইনহেরিট)
-         ========================================================================= -->
     <header class="header">
 
-        <!-- টপ হেডার: 1200px container + flex-shrink — zoom-এ wrap/shrink রোধ -->
         <div class="topHeader">
             <div class="container">
                 <div class="topHeader-inner d-flex align-items-center justify-content-between flex-nowrap">
@@ -47,7 +43,6 @@
             </div>
         </div>
 
-        <!-- মেইন হেডার: logo + search + utilities — flex-shrink সুরক্ষা -->
         <div class="mainHeader d-none d-lg-block">
             <div class="container">
                 <div class="mainHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
@@ -55,15 +50,15 @@
                         <a href="index.html"><img src="assets/images/logo.svg" alt="Ecobazar"></a>
                     </div>
                     <div class="mainHeader-search flex-shrink-0">
-                        <form>
+                        <form action="shop.html" method="get">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="1.5"
                                         d="M15.553 15.553a7.06 7.06 0 1 0-9.985-9.985a7.06 7.06 0 0 0 9.985 9.985m0 0L20 20" />
                                 </svg></span>
                             <div class="d-flex flex-nowrap">
-                                <input type="text" placeholder="Search">
-                                <button type="button">Search</button>
+                                <input type="search" name="q" placeholder="Search">
+                                <button type="submit">Search</button>
                             </div>
                         </form>
                     </div>
@@ -97,7 +92,6 @@
             </div>
         </div>
 
-        <!-- বটম হেডার: flex-shrink: 0 + max-width 1200px — zoom-এ layout ভাঙা রোধ -->
         <div class="bottomHeader d-none d-lg-block">
             <div class="container">
                 <div class="bottomHeader-inner d-flex align-items-center justify-content-between">
@@ -130,7 +124,6 @@
             </div>
         </div>
 
-        <!-- মোবাইল হেডার: flex-shrink সুরক্ষা -->
         <div class="mblHeader d-lg-none">
             <div class="container">
                 <div class="mblHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
@@ -152,24 +145,33 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <form class="mobile-search mb-3" action="shop.html" method="get">
+                                    <div class="input-group">
+                                        <input type="search" name="q" class="form-control" placeholder="Search">
+                                        <button class="btn btn-success" type="submit">Search</button>
+                                    </div>
+                                </form>
+                                <ul class="navbar-nav mobile-primary-nav me-auto mb-2">
                                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                    <li>
-                                        <a class="text-dark active" href="shop.html">Shop
-                                            <span class="arrow"><iconify-icon icon="iconoir:nav-arrow-down" width="22"
-                                                    height="22"></iconify-icon></span>
-                                            <ul class="submenu">
-                                                <li><a href="shop.html">Vegetable</a></li>
-                                                <li><a href="shop.html">Fruit</a></li>
-                                                <li><a href="shop.html">Organic Products</a></li>
-                                                <li><a href="shop.html">Dairy Products</a></li>
-                                            </ul>
-                                        </a>
+                                    <li class="nav-item mobile-shop-item">
+                                        <div class="mobile-shop-row d-flex align-items-center">
+                                            <a class="nav-link active flex-grow-1" href="shop.html">Shop</a>
+                                            <button type="button" class="mobile-shop-toggle" aria-expanded="false"
+                                                aria-label="Toggle shop categories">
+                                                <iconify-icon icon="iconoir:nav-arrow-down" width="20"
+                                                    height="20"></iconify-icon>
+                                            </button>
+                                        </div>
+                                        <ul class="submenu list-unstyled mb-0">
+                                            <li><a href="shop.html">Vegetable</a></li>
+                                            <li><a href="shop.html">Fruit</a></li>
+                                            <li><a href="shop.html">Organic Products</a></li>
+                                            <li><a href="shop.html">Dairy Products</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -202,9 +204,6 @@
         </div>
     </header>
 
-    <!-- =========================================================================
-         ২.১ ব্রেডক্রাম্ব ও পেজ টাইটেল ব্যানার সেকশন
-         ========================================================================= -->
     <section class="shop-breadcrumb-banner">
         <div class="container">
             <div class="d-flex flex-column justify-content-center shop-breadcrumb-inner">
@@ -222,30 +221,23 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         শপ পেজ মূল কন্টেন্ট (সাইডবার + প্রোডাক্ট গ্রিড)
-         ========================================================================= -->
     <div class="container my-5 py-4">
         <div class="row g-4">
 
-            <!-- ২.৩ সাইডবার ফিল্টার (ডেস্কটপ — lg+ এ দৃশ্যমান) -->
             <aside class="col-lg-3 d-none d-lg-block">
                 <div id="shopSidebarFilters">
-                    <!-- ফিল্টার প্যানেলগুলো sidebarFilters টেমপ্লেট থেকে লোড হবে -->
+                    
                 </div>
             </aside>
 
-            <!-- ২.৪–২.৭ মেইন শপ কন্টেন্ট কলাম -->
             <main class="col-lg-9 col-12">
 
-                <!-- মোবাইল ফিল্টার ট্রিগার বাটন (< 992px) -->
                 <button class="btn btn-outline-success d-lg-none w-100 mb-3 shop-filter-trigger" type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#shopFilterOffcanvas"
                     aria-controls="shopFilterOffcanvas">
                     Filter Results <i class="fa-solid fa-sliders ms-2"></i>
                 </button>
 
-                <!-- ২.৪ কন্টেন্ট কন্ট্রোল হেডার প্যানেল -->
                 <div class="shop-control-bar d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
                     <p class="text-muted small mb-0 shop-results-text">Showing <strong>1–16</strong> of
                         <strong>42</strong> results
@@ -272,7 +264,6 @@
                     </div>
                 </div>
 
-                <!-- ২.৫ অ্যাক্টিভ ফিল্টার ব্যাজ রো -->
                 <div class="active-filters-row d-flex flex-wrap align-items-center gap-2 mb-4">
                     <span class="small text-muted me-1">Active Filters:</span>
                     <span class="active-filter-badge">
@@ -288,10 +279,8 @@
                     <span class="ms-auto small text-muted shop-total-results">2,547 Results found.</span>
                 </div>
 
-                <!-- ২.৬ ডাইনামিক প্রোডাক্ট গ্রিড (৪ কলাম ডেস্কটপ) -->
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3 g-lg-4" id="shopProductGrid">
 
-                    <!-- প্রোডাক্ট কার্ড ১ -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <div class="shop-card-actions">
@@ -320,7 +309,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ২ -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <div class="shop-card-actions">
@@ -349,7 +337,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ৩ — হোভার স্টেট (গ্রিন বর্ডার) -->
                     <div class="col">
                         <div
                             class="card h-100 product-card shop-product-card shop-card-hover position-relative border p-3">
@@ -379,7 +366,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ৪ — Out of Stock -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <span class="badge bg-dark position-absolute top-0 start-0 m-2">Out of Stock</span>
@@ -409,7 +395,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ৫ -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <div class="shop-card-actions">
@@ -439,7 +424,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ৬ -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <div class="shop-card-actions">
@@ -468,7 +452,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ৭ -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <div class="shop-card-actions">
@@ -497,7 +480,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ৮ — Sale 50% -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale 50%</span>
@@ -528,7 +510,6 @@
                         </div>
                     </div>
 
-                    <!-- প্রোডাক্ট কার্ড ৯–১৬ -->
                     <div class="col">
                         <div class="card h-100 product-card shop-product-card position-relative border p-3">
                             <div class="shop-card-actions">
@@ -782,9 +763,6 @@
         </div>
     </div>
 
-    <!-- =========================================================================
-         মোবাইল ফিল্টার অফক্যানভাস (< 992px)
-         ========================================================================= -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="shopFilterOffcanvas"
         aria-labelledby="shopFilterOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
@@ -792,15 +770,11 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body" id="shopOffcanvasFilters">
-            <!-- ফিল্টার প্যানেল sidebarFilters টেমপ্লেট থেকে ক্লোন হবে -->
         </div>
     </div>
 
-    <!-- =========================================================================
-         ফিল্টার সাইডবার টেমপ্লেট (JS দিয়ে sidebar ও offcanvas-এ ক্লোন)
-         ========================================================================= -->
     <template id="sidebarFilters">
-        <!-- All Categories ফিল্টার প্যানেল -->
+       
         <div class="shop-filter-panel mb-4">
             <button class="shop-filter-toggle w-100 d-flex justify-content-between align-items-center mb-3"
                 type="button" data-bs-toggle="collapse" data-bs-target="#filterCategories" aria-expanded="true">
@@ -831,7 +805,6 @@
             </div>
         </div>
 
-        <!-- Price Range ফিল্টার প্যানেল -->
         <div class="shop-filter-panel mb-4">
             <button class="shop-filter-toggle w-100 d-flex justify-content-between align-items-center mb-3"
                 type="button" data-bs-toggle="collapse" data-bs-target="#filterPrice" aria-expanded="true">
@@ -851,7 +824,6 @@
             </div>
         </div>
 
-        <!-- Rating ফিল্টার প্যানেল -->
         <div class="shop-filter-panel mb-4">
             <button class="shop-filter-toggle w-100 d-flex justify-content-between align-items-center mb-3"
                 type="button" data-bs-toggle="collapse" data-bs-target="#filterRating" aria-expanded="true">
@@ -909,7 +881,6 @@
             </div>
         </div>
 
-        <!-- Popular Tags ফিল্টার প্যানেল -->
         <div class="shop-filter-panel mb-4">
             <button class="shop-filter-toggle w-100 d-flex justify-content-between align-items-center mb-3"
                 type="button" data-bs-toggle="collapse" data-bs-target="#filterTags" aria-expanded="true">
@@ -936,9 +907,6 @@
         </div>
     </template>
 
-    <!-- =========================================================================
-         ফুটার সেকশন (index.html থেকে ইনহেরিট)
-         ========================================================================= -->
     <footer class="main-footer">
         <div class="newsletter-bar py-5 bg-light">
             <div class="container">
@@ -1000,28 +968,28 @@
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Helps</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Faqs</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Faqs</a></li>
+                            <li><a href="contact.html">Terms & Condition</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Proxy</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">About</a></li>
+                            <li><a href="about.html">About</a></li>
                             <li><a href="shop.html">Shop</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Track Order</a></li>
+                            <li><a href="shop.html">Product</a></li>
+                            <li><a href="shop.html">Track Order</a></li>
                         </ul>
                     </div>
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Categories</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Fruit & Vegetables</a></li>
-                            <li><a href="#">Meat & Fish</a></li>
-                            <li><a href="#">Bread & Bakery</a></li>
-                            <li><a href="#">Beauty & Health</a></li>
+                            <li><a href="shop.html">Fruit & Vegetables</a></li>
+                            <li><a href="shop.html">Meat & Fish</a></li>
+                            <li><a href="shop.html">Bread & Bakery</a></li>
+                            <li><a href="shop.html">Beauty & Health</a></li>
                         </ul>
                     </div>
                 </div>

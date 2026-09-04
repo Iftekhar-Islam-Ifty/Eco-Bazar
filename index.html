@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco Bazar - Organic Grocery</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="assets/images/fav.jpg" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -16,17 +15,7 @@
 <body>
 
     <header class="header">
-        <!-- <div class="top-bar py-2 bg-light text-muted small border-bottom d-none d-md-block">
-            <div class="container d-flex justify-content-between">
-                <div><i class="fa-solid fa-location-dot text-success"></i> Store Location: Lincoln-344, USA</div>
-                <div>
-                    <span class="me-3">Eng <i class="fa-solid fa-angle-down"></i></span>
-                    <span>USD <i class="fa-solid fa-angle-down"></i></span>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- টপ হেডার: 1200px container + flex-shrink — zoom-এ wrap/shrink রোধ -->
+        
         <div class="topHeader">
             <div class="container">
                 <div class="topHeader-inner d-flex align-items-center justify-content-between flex-nowrap">
@@ -54,33 +43,7 @@
             </div>
         </div>
 
-        <!-- <div class="middle-header py-3 bg-white border-bottom">
-            <div class="container">
-                <div class="row align-items-center gy-3">
-                    <div class="col-6 col-md-3">
-                        <a href="#" class="navbar-brand fw-bold text-success fs-3">
-                            <i class="fa-solid fa-leaf"></i> Ecobazar
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 order-3 order-md-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search products...">
-                            <button class="btn btn-success" type="button">Search</button>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3 text-end order-2 order-md-3">
-                        <a href="#" class="text-dark me-3 position-relative"><i class="fa-regular fa-heart fs-4"></i></a>
-                        <a href="#" class="text-dark position-relative me-2">
-                            <i class="fa-solid fa-bag-shopping fs-4"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">2</span>
-                        </a>
-                        <span class="small d-none d-lg-inline">Shopping Cart: <strong>$57.00</strong></span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- মেইন হেডার: logo + search + utilities — flex-shrink সুরক্ষা -->
+        
         <div class="mainHeader d-none d-lg-block">
             <div class="container">
                 <div class="mainHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
@@ -88,15 +51,15 @@
                         <a href="index.html"><img src="assets/images/logo.svg" alt="Ecobazar"></a>
                     </div>
                     <div class="mainHeader-search flex-shrink-0">
-                        <form>
+                        <form action="shop.html" method="get">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="1.5"
                                         d="M15.553 15.553a7.06 7.06 0 1 0-9.985-9.985a7.06 7.06 0 0 0 9.985 9.985m0 0L20 20" />
                                 </svg></span>
                             <div class="d-flex flex-nowrap">
-                                <input type="text" placeholder="Search">
-                                <button type="button">Search</button>
+                                <input type="search" name="q" placeholder="Search">
+                                <button type="submit">Search</button>
                             </div>
                         </form>
                     </div>
@@ -109,7 +72,7 @@
                                             d="M7 3.183C3.98-.522.792 2.111.75 4.949C.75 9.173 5.805 12.64 7 12.64s6.25-3.468 6.25-7.692C13.208 2.11 10.02-.522 7 3.183"
                                             stroke-width="1" />
                                     </svg></a></li>
-                            <li><a href="#" class="shoppingCart">
+                            <li><a href="shop.html" class="shoppingCart">
                                     <div class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                             viewBox="0 0 24 24">
@@ -130,26 +93,7 @@
             </div>
         </div>
 
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                    </ul>
-                    <span class="navbar-text text-white"><i class="fa-solid fa-phone-volume text-success me-2"></i> (123) 456-7890</span>
-                </div>
-            </div>
-        </nav> -->
-
-        <!-- বটম হেডার: flex-shrink: 0 + max-width 1200px — zoom-এ layout ভাঙা রোধ -->
+        
         <div class="bottomHeader d-none d-lg-block">
             <div class="container">
                 <div class="bottomHeader-inner d-flex align-items-center justify-content-between">
@@ -158,16 +102,16 @@
                             <li>
                                 <a class="active" href="index.html">Home</a>
                             </li>
-                            <!-- Submenu -->
+                            
                             <li>
                                 <a href="shop.html">Shop
                                     <span class="arrow"><iconify-icon icon="iconoir:nav-arrow-down" width="24"
                                             height="24"></iconify-icon></span></a>
                                 <ul class="submenu">
-                                    <li><a href="#">Vegetable</a></li>
-                                    <li><a href="#">Fruit</a></li>
-                                    <li><a href="#">Organic Products</a></li>
-                                    <li><a href="#">Dairy Products</a></li>
+                                    <li><a href="shop.html">Vegetable</a></li>
+                                    <li><a href="shop.html">Fruit</a></li>
+                                    <li><a href="shop.html">Organic Products</a></li>
+                                    <li><a href="shop.html">Dairy Products</a></li>
                                 </ul>
                             </li>
                             <!-- Submenu end-->
@@ -186,7 +130,6 @@
             </div>
         </div>
 
-        <!-- মোবাইল হেডার: flex-shrink সুরক্ষা -->
         <div class="mblHeader d-lg-none">
             <div class="container">
                 <div class="mblHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
@@ -208,24 +151,33 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <form class="mobile-search mb-3" action="shop.html" method="get">
+                                    <div class="input-group">
+                                        <input type="search" name="q" class="form-control" placeholder="Search">
+                                        <button class="btn btn-success" type="submit">Search</button>
+                                    </div>
+                                </form>
+                                <ul class="navbar-nav mobile-primary-nav me-auto mb-2">
                                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                                    <li>
-                                        <a class="text-dark" href="shop.html">Shop
-                                            <span class="arrow"><iconify-icon icon="iconoir:nav-arrow-down" width="22"
-                                                    height="22"></iconify-icon></span>
-                                            <ul class="submenu">
-                                                <li><a href="#">Vegetable</a></li>
-                                                <li><a href="#">Fruit</a></li>
-                                                <li><a href="#">Organic Products</a></li>
-                                                <li><a href="#">Dairy Products</a></li>
-                                            </ul>
-                                        </a>
+                                    <li class="nav-item mobile-shop-item">
+                                        <div class="mobile-shop-row d-flex align-items-center">
+                                            <a class="nav-link flex-grow-1" href="shop.html">Shop</a>
+                                            <button type="button" class="mobile-shop-toggle" aria-expanded="false"
+                                                aria-label="Toggle shop categories">
+                                                <iconify-icon icon="iconoir:nav-arrow-down" width="20"
+                                                    height="20"></iconify-icon>
+                                            </button>
+                                        </div>
+                                        <ul class="submenu list-unstyled mb-0">
+                                            <li><a href="shop.html">Vegetable</a></li>
+                                            <li><a href="shop.html">Fruit</a></li>
+                                            <li><a href="shop.html">Organic Products</a></li>
+                                            <li><a href="shop.html">Dairy Products</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -240,7 +192,7 @@
                                             d="M7 3.183C3.98-.522.792 2.111.75 4.949C.75 9.173 5.805 12.64 7 12.64s6.25-3.468 6.25-7.692C13.208 2.11 10.02-.522 7 3.183"
                                             stroke-width="1" />
                                     </svg></a></li>
-                            <li><a href="#" class="shoppingCart">
+                            <li><a href="shop.html" class="shoppingCart">
                                     <div class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                             viewBox="0 0 24 24">
@@ -259,39 +211,6 @@
 
     </header>
 
-    <!-- <section class="hero-section my-4">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-8">
-                    <div class="p-5 text-white rounded bg-success-subtle position-relative main-banner-box"
-                        style="min-height: 600px;">
-                        <div class="position-relative z-1 max-w-md mt-4">
-                            <h1 class="display-4 my-3">Fresh & Healthy <br>Organic Food</h1>
-                            <p class="fs-5 sale">Sale up to <span class=" discount px-2 py-1 rounded fw-bold">30% OFF</span></p>
-                            <p class="small">Free shipping on all your orders.</p>
-                            <a href="#" class="btn btn-light text-colour-lightGreen shopNowFix fw-bold btn-lg mt-3 rounded-pill">Shop Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-flex flex-column justify-content-between gap-4">
-                    <div class="p-4 rounded side-banner bg-light flex-grow-1 position-relative">
-                        <span class="text-muted uppercase small fw-bold">Summer Sale</span>
-                        <h4 class="fw-bold text-dark py-2">75% OFF</h4>
-                        <p class="text-success pb-4 pt-2 small">Only Fruit & Vegetable</p>
-                        <a href="#" class="text-success fw-bold text-decoration-none">Shop Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="p-4 rounded side-banner2 text-center text-white flex-grow-1 position-relative"
-                        style="background-color: #0c2d1c;">
-                        <p class="text-white uppercase small mt-4 fw-bold">Best Deals</p>
-                        <h4 class="fw-bold my-4">Special Products <br>Deal of the Month</h4>
-                        <a href="#" class="text-colour-lightGreen fw-bold ">Shop Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     
     <section class="hero-section my-4">
         <div class="container">
@@ -303,7 +222,7 @@
                             <p class="fs-5 sale">Sale up to <span class="discount px-2 py-1 rounded fw-bold">30%
                                     OFF</span></p>
                             <p class="small text-muted-white">Free shipping on all your orders.</p>
-                            <a href="#"
+                            <a href="shop.html"
                                 class="btn btn-light text-colour-lightGreen shopNowFix fw-bold btn-lg mt-3 rounded-pill">Shop
                                 Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
@@ -315,14 +234,14 @@
                         <span class="text-muted uppercase small fw-bold">Summer Sale</span>
                         <h4 class="fw-bold text-dark py-2">75% OFF</h4>
                         <p class="text-success pb-4 pt-2 small">Only Fruit & Vegetable</p>
-                        <a href="#" class="text-success fw-bold text-decoration-none">Shop Now <i
+                        <a href="shop.html" class="text-success fw-bold text-decoration-none">Shop Now <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <div class="p-4 rounded side-banner2 text-center text-white flex-grow-1 position-relative"
                         style="background-color: #0c2d1c;">
                         <p class="text-white uppercase small mt-4 fw-bold">Best Deals</p>
                         <h4 class="fw-bold my-4">Special Products <br>Deal of the Month</h4>
-                        <a href="#" class="text-colour-lightGreen fw-bold ">Shop Now <i
+                        <a href="shop.html" class="text-colour-lightGreen fw-bold ">Shop Now <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -363,109 +282,94 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-     POPULAR CATEGORIES 
-     ========================================================================= -->
+   
     <section class="popular-categories my-5 container">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h3 class="fw-bold mb-0">Popular Categories</h3>
-            <a href="#" class="text-success text-decoration-none">View All <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="shop.html" class="text-success text-decoration-none">View All <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <!-- বুটস্ট্র্যাপ গ্রিড: মোবাইলে এক লাইনে ২টি, ট্যাবলেটে ৪টি, ডেক্সটপে ৬টি ইমেজ দেখাবে -->
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
 
-            <!-- Category 1 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category.png" alt="Fresh Fruit Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 2 (Active)-->
             <div class="col">
-                <a href="#" class="category-img-link active-category">
+                <a href="shop.html" class="category-img-link active-category">
                     <img src="./assets/images/Popular C/Category (1).png" alt="Vegetables Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 3 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (2).png" alt="Meat & Fish Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 4 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (3).png" alt="Snacks Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 5 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (4).png" alt="Bakery Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 6 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (5).png" alt="Beverages Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 7 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (7).png" alt="Fresh Fruit Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 8 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (8).png" alt="Vegetables Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 9 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (9).png" alt="Meat & Fish Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 10 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (10).png" alt="Snacks Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 11 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (11).png" alt="Bakery Category"
                         class="category-full-img">
                 </a>
             </div>
 
-            <!-- Category 12 -->
             <div class="col">
-                <a href="#" class="category-img-link">
+                <a href="shop.html" class="category-img-link">
                     <img src="./assets/images/Popular C/Category (12).png" alt="Beverages Category"
                         class="category-full-img">
                 </a>
@@ -474,13 +378,10 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-     POPULAR PRODUCTS 
-     ========================================================================= -->
     <section class="popular-products my-5 container">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h3 class="fw-bold mb-0">Popular Products</h3>
-            <a href="#" class="text-success text-decoration-none">View All <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="shop.html" class="text-success text-decoration-none">View All <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
@@ -759,13 +660,9 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-     MIDDLE THREE PROMOTION BANNERS (৩টি অফার ব্যানার সেকশন)
-     ========================================================================= -->
     <section class="promo-banners my-5 container">
         <div class="row g-4">
 
-            <!-- ব্যানার ১: কাউন্টডাউন টাইমার ব্যানার -->
             <div class="col-md-4">
                 <div
                     class="p-4 rounded text-white text-center d-flex flex-column justify-content-between position-relative promo-banner-1">
@@ -773,19 +670,18 @@
                         <span class="text-uppercase small tracking-wider">Best Deals</span>
                         <h3 class="fw-bold my-2">Sale of the Month</h3>
                     </div>
-                    <!-- টাইমার বক্স -->
+
                     <div class="d-flex justify-content-center gap-2 my-3" id="countdown-timer">
-                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="days">00</b><br>Days</div>
-                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="hours">00</b><br>Hours</div>
-                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="mins">00</b><br>Mins</div>
-                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="secs">00</b><br>Secs</div>
+                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="saleDays">00</b><br>Days</div>
+                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="saleHours">00</b><br>Hours</div>
+                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="saleMins">00</b><br>Mins</div>
+                        <div class="bg-white text-dark p-2 rounded small flex-fill"><b id="saleSecs">00</b><br>Secs</div>
                     </div>
-                    <a href="#" class="btn btn-light rounded-pill btn-sm text-primary fw-bold mx-auto">Shop Now <i
+                    <a href="shop.html" class="btn btn-light rounded-pill btn-sm text-primary fw-bold mx-auto">Shop Now <i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- ব্যানার ২: মিট ব্যানার -->
             <div class="col-md-4">
                 <div
                     class="p-4 rounded text-white text-center d-flex flex-column justify-content-between promo-banner-2">
@@ -794,12 +690,11 @@
                         <h3 class="fw-bold my-2">Low-Fat Meat</h3>
                         <p class="small text-secondary">Started at <span class="text-warning fw-bold">$79.99</span></p>
                     </div>
-                    <a href="#" class="btn btn-warning rounded-pill btn-sm text-dark fw-bold mx-auto">Shop Now <i
+                    <a href="shop.html" class="btn btn-warning rounded-pill btn-sm text-dark fw-bold mx-auto">Shop Now <i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- ব্যানার ৩: ফ্রুটস ব্যানার -->
             <div class="col-md-4">
                 <div
                     class="p-4 rounded text-dark text-center d-flex flex-column justify-content-between promo-banner-3">
@@ -809,7 +704,7 @@
                         <p class="small text-success">Up to <span class="bg-dark text-white px-2 py-1 rounded">64%
                                 OFF</span></p>
                     </div>
-                    <a href="#" class="btn btn-success rounded-pill btn-sm text-white fw-bold mx-auto">Shop Now <i
+                    <a href="shop.html" class="btn btn-success rounded-pill btn-sm text-white fw-bold mx-auto">Shop Now <i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -817,56 +712,50 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-     HOT DEALS SECTION
-   ========================================================================= -->
     <section class="hot-deals-section py-5 bg-white">
         <div class="container">
 
-            <!-- হেডিং এবং ভিউ অল বাটন -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="fw-bold text-dark m-0">Hot Deals</h2>
-                <a href="#" class="text-success text-decoration-none fw-semibold">View All <i
+                <a href="shop.html" class="text-success text-decoration-none fw-semibold">View All <i
                         class="fa-solid fa-arrow-right ms-1"></i></a>
             </div>
 
             <div class="row g-0 border">
 
-                <!-- ১ম অংশ: বড় অফার প্রোডাক্ট (কাউন্টডাউন টাইমারসহ) -->
                 <div class="col-lg-4 col-md-6 border-end p-4 position-relative main-deal-box"
                     style="border: 1px solid var(--branding-success-dark) !important; z-index: 2;">
-                    <!-- ব্যাজ সমূহ -->
+                    
                     <div class="position-absolute top-3 start-3 d-flex gap-2"
                         style="top: 20px; left: 20px; z-index: 3;">
                         <span class="badge bg-danger px-2 py-1">Sale 50%</span>
                         <span class="badge bg-primary px-2 py-1">Best Sale</span>
                     </div>
 
-                    <!-- প্রোডাক্ট ইমেজ (এখানে আপনার ছবি বসাবেন) -->
                     <div class="deal-img-container text-center my-4">
                         <img src="./assets/images/Hot deals/Image.png" alt="Chinese cabbage"
                             class="img-fluid deal-main-img">
                     </div>
 
-                    <!-- উইশলিস্ট ও কুইক ভিউ বাটন -->
+                    
                     <div class="d-flex justify-content-between align-items-center px-2 mb-3">
                         <button class="btn btn-light rounded-circle border shadow-sm btn-action"><i
                                 class="fa-regular fa-heart"></i></button>
-                        <!-- অ্যাড টু কার্ট বাটন -->
+                        
                         <button class="btn btn-success rounded-pill px-4 py-2 w-100 mx-3 fw-semibold">Add to Cart <i
                                 class="fa-solid fa-bag-shopping ms-2"></i></button>
                         <button class="btn btn-light rounded-circle border shadow-sm btn-action"><i
                                 class="fa-regular fa-eye"></i></button>
                     </div>
 
-                    <!-- প্রোডাক্ট ইনফো -->
+                    
                     <div class="text-center">
                         <h5 class="text-dark fw-medium mb-1">Chinese cabbage</h5>
                         <div class="mb-2">
                             <span class="text-danger fw-bold fs-5">$12.00</span>
                             <span class="text-muted text-decoration-line-through ms-2">$24.00</span>
                         </div>
-                        <!-- রেটিং -->
+                        
                         <div class="text-warning small mb-3">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                 class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -876,35 +765,34 @@
 
                         <p class="text-muted small mb-2">Hurry up! Offer ends in:</p>
 
-                        <!-- কাউন্টডাউন টাইমার ডিসপ্লে -->
+                        
                         <div class="d-flex justify-content-center gap-3 countdown-container text-dark fw-bold">
-                            <div class="text-center"><span id="days">01</span>
+                            <div class="text-center"><span id="dealDays">01</span>
                                 <div class="small-text">DAYS</div>
                             </div>
                             <span>:</span>
-                            <div class="text-center"><span id="hours">23</span>
+                            <div class="text-center"><span id="dealHours">23</span>
                                 <div class="small-text">HOURS</div>
                             </div>
                             <span>:</span>
-                            <div class="text-center"><span id="mins">34</span>
+                            <div class="text-center"><span id="dealMins">34</span>
                                 <div class="small-text">MINS</div>
                             </div>
                             <span>:</span>
-                            <div class="text-center"><span id="secs">57</span>
+                            <div class="text-center"><span id="dealSecs">57</span>
                                 <div class="small-text">SECS</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ২য় অংশ: বাকি ৮টি ছোট প্রোডাক্টের গ্রিড (২ লাইনে ৪টি করে) -->
                 <div class="col-lg-8 col-md-6">
                     <div class="row row-cols-2 row-cols-lg-3 g-0">
 
-                        <!-- Card 1 -->
+                        
                         <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                             <div class="product-img-box text-center mb-3">
-                                <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                                
                                 <img src="./assets/images/Hot deals/Product Image.png" alt="Chinese cabbage"
                                     class="img-fluid grid-prod-img">
                             </div>
@@ -923,10 +811,9 @@
                             </div>
                         </div>
 
-                        <!-- Card 2 -->
                         <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                             <div class="product-img-box text-center mb-3">
-                                <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                                
                                 <img src="./assets/images/Hot deals/Product Image (1).png" alt="Green Lettuce"
                                     class="img-fluid grid-prod-img">
                             </div>
@@ -945,10 +832,9 @@
                             </div>
                         </div>
 
-                        <!-- Card 3 -->
                         <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                             <div class="product-img-box text-center mb-3">
-                                <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+
                                 <img src="./assets/images/Hot deals/Product Image (2).png" alt="Eggplant"
                                     class="img-fluid grid-prod-img">
                             </div>
@@ -970,7 +856,7 @@
                         <!-- Card 4 -->
                         <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                             <div class="product-img-box text-center mb-3">
-                                <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                                
                                 <img src="./assets/images/Hot deals/Product Image (3).png" alt="Fresh Cauliflower"
                                     class="img-fluid grid-prod-img">
                             </div>
@@ -989,7 +875,6 @@
                             </div>
                         </div>
 
-                        <!-- Card 5 (Badge) -->
                         <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                             <span class="badge bg-danger position-absolute top-3 start-3"
                                 style="top: 15px; left: 15px;">Sale 50%</span>
@@ -1013,10 +898,10 @@
                             </div>
                         </div>
 
-                        <!-- Card 6 -->
+                        
                         <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                             <div class="product-img-box text-center mb-3">
-                                <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+
                                 <img src="./assets/images/Hot deals/Product Image (5).png" alt="Green Chili"
                                     class="img-fluid grid-prod-img">
                             </div>
@@ -1039,10 +924,10 @@
                 </div>
 
                 <div class="row row-cols-2 row-cols-lg-5 g-0">
-                    <!-- Card 7 -->
+                    
                     <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                         <div class="product-img-box text-center mb-3">
-                            <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                            
                             <img src="./assets/images/Hot deals/Product Image (6).png" alt="Big Potatoes"
                                 class="img-fluid grid-prod-img">
                         </div>
@@ -1061,10 +946,9 @@
                         </div>
                     </div>
 
-                    <!-- Card 8 -->
                     <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                         <div class="product-img-box text-center mb-3">
-                            <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                            
                             <img src="./assets/images/Hot deals/Product Image (7).png" alt="Corn"
                                 class="img-fluid grid-prod-img">
                         </div>
@@ -1083,10 +967,9 @@
                         </div>
                     </div>
 
-                    <!-- Card 9 -->
                     <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                         <div class="product-img-box text-center mb-3">
-                            <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                           
                             <img src="./assets/images/Hot deals/Product Image (8).png" alt="Red Chili"
                                 class="img-fluid grid-prod-img">
                         </div>
@@ -1105,10 +988,9 @@
                         </div>
                     </div>
 
-                    <!-- Card 10 -->
                     <div class="col border-end border-bottom p-3 product-grid-item position-relative">
                         <div class="product-img-box text-center mb-3">
-                            <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                            
                             <img src="./assets/images/Hot deals/Product Image (9).png" alt="Red Tomatos"
                                 class="img-fluid grid-prod-img">
                         </div>
@@ -1127,10 +1009,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 11 -->
+                    
                     <div class="col border-end border-bottom p-3 product-grid-item position-relative d-none d-lg-block">
                         <div class="product-img-box text-center mb-3">
-                            <!-- এখানে আপনার সবজির ছবি বসাবেন -->
+                            
                             <img src="./assets/images/Hot deals/Product Image (10).png" alt="Surjapur Mango"
                                 class="img-fluid grid-prod-img">
                         </div>
@@ -1153,14 +1035,12 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-     WIDE BANNER SECTION (বড় ডিসকাউন্ট ব্যানার সেকশন)
-     ========================================================================= -->
+   
     <section class="wide-banner my-5 container">
-        <!-- কাস্টম সিএসএস ক্লাসের মাধ্যমে ব্যাকগ্রাউন্ড ইমেজ ও কালার কন্ট্রোল করা হয়েছে -->
+       
         <div class="p-5 rounded text-white text-md-start position-relative wide-discount-banner">
 
-            <!-- টেক্সট কন্টেইনার (ডেক্সটপে ডানপাশে এবং মোবাইলে সেন্টারে থাকবে) -->
+            
             <div class="max-w-md ms-auto text-content-box">
                 <span class="text-warning text-uppercase small fw-bold tracking-wider">Summer Sale</span>
                 <h2 class="display-6 fw-bold my-2 wideBanner"><span class="text-warning ">37%</span> OFF</h2>
@@ -1169,7 +1049,7 @@
                     <br> money-back guarantee.
                 </p>
                 <p class="d-lg-none wideBanner2">Free on all your order</p>
-                <a href="#" class="btn btn-success rounded-pill px-4 shop-now-btn">
+                <a href="shop.html" class="btn btn-success rounded-pill px-4 shop-now-btn">
                     Shop Now <i class="fa-solid fa-arrow-right ms-2"></i>
                 </a>
             </div>
@@ -1184,7 +1064,7 @@
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0 news-card">
 
-                    <div style="min-height: 324px; min-width: 424px;" class="ratio  news-img-box">
+                    <div class="ratio news-img-box">
                         <img src="./assets/images/Image.png" alt="Blog Title" class="card-img-top news-img">
 
                     </div>
@@ -1199,7 +1079,7 @@
                         <h5 class="card-title fw-bold my-3 news-title">Curabitur porttitor vitae velit ac tincidunt.
                         </h5>
 
-                        <a href="#" class="text-success fw-bold text-decoration-none small read-more-link">
+                        <a href="blog.html" class="text-success fw-bold text-decoration-none small read-more-link">
                             Read More <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -1209,7 +1089,7 @@
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0 news-card">
 
-                    <div style="min-height: 324px; min-width: 424px;" class="ratio  news-img-box">
+                    <div class="ratio news-img-box">
                         <img src="./assets/images/Image (1).png" alt="Blog Title" class="card-img-top news-img">
 
                     </div>
@@ -1225,7 +1105,7 @@
                             semper,
                         </h5>
 
-                        <a href="#" class="text-success fw-bold text-decoration-none small read-more-link">
+                        <a href="blog.html" class="text-success fw-bold text-decoration-none small read-more-link">
                             Read More <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -1235,7 +1115,7 @@
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0 news-card">
 
-                    <div style="min-height: 324px; min-width: 424px;" class="ratio  news-img-box">
+                    <div class="ratio news-img-box">
                         <img src="./assets/images/Image (2).png" alt="Blog Title" class="card-img-top news-img">
 
                     </div>
@@ -1251,7 +1131,7 @@
                             malesuada.
                         </h5>
 
-                        <a href="#" class="text-success fw-bold text-decoration-none small read-more-link">
+                        <a href="blog.html" class="text-success fw-bold text-decoration-none small read-more-link">
                             Read More <i class="fa-solid fa-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -1380,7 +1260,6 @@
         <h3 class="fw-bold mb-4">Follow us on Instagram</h3>
 
 
-        <!-- row-cols-3 (মোবাইলে ৩টি), row-cols-lg-6 (ল্যাপটপ/লার্জ স্ক্রিনে ৬টি) -->
         <div class="row row-cols-3 row-cols-lg-6 g-2">
 
             <div class="col">
@@ -1457,12 +1336,8 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-     FOOTER SECTION (নিউজলেটার এবং মেইন ফুটার লিংক)
-     ========================================================================= -->
     <footer class="main-footer">
 
-        <!-- ১. ওপরের অংশ: নিউজলেটার সাবস্ক্রিপশন বার (হালকা ব্যাকগ্রাউন্ড) -->
         <div class="newsletter-bar py-5 bg-light">
             <div class="container">
                 <div class="row align-items-center g-4">
@@ -1493,23 +1368,20 @@
             </div>
         </div>
 
-        <!-- ২. নিচের অংশ: মেইন ফুটার কন্টেন্ট (ডার্ক ব্যাকগ্রাউন্ড) -->
         <div class="footer-content py-5 text-secondary">
             <div class="container">
                 <div class="footer-columns-inner row g-4 flex-lg-nowrap">
                     <div class="col-md-6 col-lg-3 footer-col flex-shrink-0 text-center text-md-start">
 
-                        <!-- সরাসরি লোগো ইমেজ বসানোর ব্যবস্থা (টেক্সট ছাড়া) -->
                         <div class="footer-logo-wrapper mb-3">
-                            <a href="#" class="d-inline-block">
-                                <!-- "Footer.png" ফাইলের ডিজাইন অনুযায়ী আপনার লোগো ইমেজটি এখানে বসবে -->
+                            <a href="index.html" class="d-inline-block">
+                                
                                 <img src="assets/images/Logo.png" alt="Ecobazar Logo" class="footer-brand-logo">
                             </a>
                         </div>
                         <p class="small mb-4">Morbi cursus porttitor enim lobortis molestie. Duis gravida
                             turpis dui, eget bibendum magna congue nec.</p>
 
-                        <!-- কন্টাক্ট ইনফো (ফোন ও ইমেইল) -->
                         <div
                             class="contact-info d-flex flex-nowrap justify-content-center justify-content-md-start align-items-center gap-2 small">
                             <a href="tel:2195550114"
@@ -1521,7 +1393,7 @@
                         </div>
                     </div>
 
-                    <!-- কলাম ২: My Account লিংকলিস্ট -->
+                   
                     <div class="col-4 col-md-3 col-lg-2 ms-lg-auto footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3 ">My Account</h6>
                         <ul class="list-unstyled footer-links small">
@@ -1532,50 +1404,45 @@
                         </ul>
                     </div>
 
-                    <!-- কলাম ৩: Helps লিংকলিস্ট -->
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Helps</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Faqs</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Faqs</a></li>
+                            <li><a href="contact.html">Terms & Condition</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
                         </ul>
                     </div>
 
-                    <!-- কলাম ৪: Proxy লিংকলিস্ট -->
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Proxy</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Track Order</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop.html">Product</a></li>
+                            <li><a href="shop.html">Track Order</a></li>
                         </ul>
                     </div>
 
-                    <!-- কলাম ৫: Categories লিংকলিস্ট -->
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3 ">Categories</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Fruit & Vegetables</a></li>
-                            <li><a href="#">Meat & Fish</a></li>
-                            <li><a href="#">Bread & Bakery</a></li>
-                            <li><a href="#">Beauty & Health</a></li>
+                            <li><a href="shop.html">Fruit & Vegetables</a></li>
+                            <li><a href="shop.html">Meat & Fish</a></li>
+                            <li><a href="shop.html">Bread & Bakery</a></li>
+                            <li><a href="shop.html">Beauty & Health</a></li>
                         </ul>
                     </div>
 
                 </div>
 
-                <!-- ৩. বটম পার্ট: কপিরাইট এবং পেমেন্ট গেটওয়ে গেট -->
                 <hr class="border-secondary my-4 opacity-25">
                 <div class="footer-bottom-inner d-flex flex-column flex-md-row justify-content-between align-items-center flex-md-nowrap gap-3 pt-2">
-                    <!-- কপিরাইট টেক্সট -->
+                    
                     <p class="small mb-0">Ecobazar eCommerce © 2021. All Rights Reserved</p>
 
-                    <!-- পেমেন্ট মেথড গেটওয়ে আইকন গ্রুপ (এখানে আপনি ইমেজ গেটওয়ে ব্যবহার করতে পারেন) -->
                     <div class="payment-methods d-flex gap-2">
-                        <!-- ফন্টঅসাম আইকন দিয়ে ডামি বাটন করা, আপনি চাইলে এখানে আপনার "Footer.png"-এর গেটওয়ে ইমেজ ক্রপ করে বসাতে পারেন -->
+                       
                         <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i
                                 class="fa-brands fa-apple-pay fs-5"></i></span>
                         <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i

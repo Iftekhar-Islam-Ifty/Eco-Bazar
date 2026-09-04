@@ -79,7 +79,7 @@ iconify-icon {
 /* ---------------------Common code end---------------------- */
 
 /* =========================================================================
-   HEADER SECTION CUSTOMIZATION (টপ, মেইন, বটম হেডার কাস্টমাইজেশন)
+   HEADER SECTION CUSTOMIZATION 
    ========================================================================= */
 
 /* Top header start */
@@ -88,7 +88,6 @@ header .topHeader {
     box-shadow: 0 1px 0 0 #e5e5e5;
 }
 
-/* টপ বার flex wrapper — nowrap + gap দিয়ে zoom-এ wrap রোধ */
 .topHeader-inner {
     flex-wrap: nowrap;
     gap: 24px;
@@ -152,7 +151,6 @@ header .topHeader .topHeader-signin {
     padding: 28px 0;
 }
 
-/* মেইন হেডার flex wrapper — logo, search, utilities এক লাইনে */
 .mainHeader-inner {
     flex-wrap: nowrap;
     gap: 24px;
@@ -292,7 +290,6 @@ a.shoppingCart .cnt h4 {
     padding: 16px 0;
 }
 
-/* মূল flex wrapper — nowrap রেখে nav ও phone এক লাইনে ধরে রাখে */
 .bottomHeader-inner {
     flex-wrap: nowrap;
     gap: 24px;
@@ -314,7 +311,6 @@ a.shoppingCart .cnt h4 {
     gap: 32px;
 }
 
-/* প্রতিটি menu item zoom-এ 축소/wrap হবে না */
 .primaryMenu li {
     flex-shrink: 0;
     position: relative;
@@ -343,7 +339,6 @@ a.shoppingCart .cnt h4 {
     color: white;
 }
 
-/* ফোন CTA — ডানপাশে fixed-size, shrink/wrap নিষিদ্ধ */
 .bottomHeader .ctaPhone {
     display: inline-flex;
     align-items: center;
@@ -452,7 +447,7 @@ a.shoppingCart .cnt h4 {
 
 
 /* =========================================================================
-   HERO BANNER & BOXES কাস্টমাইজেশন (Desktop View)
+   HERO BANNER & BOXES (Desktop View)
    ========================================================================= */
 .main-banner-box {
     background-color: #edf2ee;
@@ -460,10 +455,8 @@ a.shoppingCart .cnt h4 {
     background-position: center;
     background-image: url('../images/mainBanner.png');
     min-height: 600px;
-    /* ডেক্সটপের জন্য হাইট এখানে দেওয়া হলো */
     display: flex;
     align-items: center;
-    /* কন্টেন্টগুলো মাঝে রাখার জন্য */
 }
 
 .main-banner-box h1 {
@@ -472,7 +465,6 @@ a.shoppingCart .cnt h4 {
     line-height: 120%;
     color: var(--gray-scale-white);
     padding: 20px 0 14px 0;
-    /* প্যাডিং ৮৫ পিক্সেল থেকে কমিয়ে ব্যালেন্স করা হয়েছে */
 }
 
 .main-banner-box .sale {
@@ -531,19 +523,16 @@ a.shoppingCart .cnt h4 {
 }
 
 /* =========================================================================
-   MOBILE RESPONSIVENESS (মোবাইলের জন্য কারেকশন)
+   MOBILE RESPONSIVENESS 
    ========================================================================= */
 @media (max-width: 768px) {
     .main-banner-box {
         min-height: 380px !important;
-        /* মোবাইলে বক্সের হাইট পারফেক্ট করা হয়েছে */
-        /* ব্যাকগ্রাউন্ড ইমেজ পজিশন ডানে সরানো হয়েছে যাতে লেখা বামে এবং ছবি ডানে ঠিক থাকে */
         background-position: right 25% center !important;
     }
 
     .main-banner-box h1 {
         font-size: 28px !important;
-        /* মোবাইলে লেখার সাইজ ছোট করা হয়েছে */
         line-height: 115%;
         padding-top: 0 !important;
     }
@@ -560,12 +549,10 @@ a.shoppingCart .cnt h4 {
 
     .shopNowFix {
         width: 150px !important;
-        /* বাটন সাইজ মোবাইলে একটু ছোট করা হয়েছে */
         height: 42px !important;
         font-size: 14px !important;
     }
 
-    /* টেক্সট বক্সের উইডথ নিয়ন্ত্রণ করা যেন ছবির ওপরে লেখা না চলে যায় */
     .text-container-fix {
         max-width: 65% !important;
     }
@@ -577,38 +564,28 @@ a.shoppingCart .cnt h4 {
    POPULAR CATEGORIES - FULL IMAGE CARD STYLES
    ========================================================================= */
 
-/* ইমেজের বাইরের অ্যাঙ্কর বা কন্টেইনার বক্স */
 .category-img-link {
     display: block;
     width: 100%;
     border: 1px solid #edf2ee;
     border-radius: 8px;
-    /* ফিগমার মতো কোনাগুলো গোল করার জন্য */
     overflow: hidden;
-    /* ইমেজ বড় হলে যেন কোনা দিয়ে বের না হয়ে যায় */
     background-color: #ffffff;
     transition: all 0.3s ease-in-out;
 }
 
-/* ইমেজটিকে ফুল বক্সে ফিট করার ম্যাজিক সিএসএস */
 .category-full-img {
     width: 100%;
     height: auto;
-    /* ইমেজের অরিজিনাল রেশিও ধরে রাখবে */
     display: block;
     object-fit: cover;
-    /* বক্সের পুরো জায়গা সুন্দরভাবে ফিলাপ করবে */
 }
 
-/* একটিভ ক্যাটাগরি বা মাউস নিয়ে গেলে যা হবে (Hover & Active State) */
 .category-img-link:hover,
 .category-img-link.active-category {
     border-color: #2c742f !important;
-    /* ফিগমার মেইন গ্রিন কালার বর্ডার */
     box-shadow: 0 4px 15px rgba(44, 116, 47, 0.15);
-    /* হালকা গ্লো ইফেক্ট */
     transform: translateY(-4px);
-    /* মাউস রাখলে সামান্য উপরে উঠবে */
 }
 
 
@@ -616,7 +593,6 @@ a.shoppingCart .cnt h4 {
    POPULAR PRODUCTS CUSTOM STYLES
    ========================================================================= */
 
-/* মেইন প্রোডাক্ট কার্ড */
 .product-card {
     border: 1px solid #f2f2f2;
     border-radius: 8px;
@@ -624,7 +600,6 @@ a.shoppingCart .cnt h4 {
     transition: all 0.3s ease-in-out;
 }
 
-/* img রাখার নির্দিষ্ট বক্স বা কন্টেইনার */
 .product-img-box {
     align-items: center;
     justify-content: center;
@@ -638,41 +613,30 @@ a.shoppingCart .cnt h4 {
     object-fit: cover;
 }
 
-/* প্রোডাক্টের মেইন ইমেজ স্টাইল */
 .product-main-img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    /* ইমেজ স্ট্রেচ/লম্বা-চ্যাপ্টা না হয়ে সুন্দর সাইজে ফিট হবে */
     transition: transform 0.3s ease;
 }
 
-/* উইশলিস্ট (হার্ট) বাটন পজিশন */
 .wishlist-btn {
     z-index: 2;
     font-size: 1.1rem;
     transition: color 0.2s;
 
-    /* আইকনটি যেন একদম ডানপাশে ফিক্সড থাকে তার জন্য নিচের ২টি লাইন নিশ্চিত করুন */
     right: 10px !important;
-    /* ডানপাশ থেকে ১০ পিক্সেল বামে থাকবে */
     left: auto !important;
-    /* বামপাশের কোনো পুশ থাকলে তা বাতিল করবে */
 }
 
 .wishlist-btn:hover {
     color: #dc3545 !important;
-    /* হোভার করলে লাভ আইকন লাল হবে */
 }
-
-/* কার্ড হোভার ইফেক্ট */
 .product-card:hover {
     border-color: #2c742f;
-    /* ইকোবাজার থিম গ্রিন বর্ডার */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* হোভার করলে ইমেজ সামান্য জুম হবে */
 .product-card:hover .product-main-img {
     transform: scale(1.05);
 }
@@ -685,38 +649,31 @@ a.shoppingCart .cnt h4 {
    PROMO BANNERS BACKGROUND IMAGES & RESPONSIVE CSS
    ========================================================================= */
 
-/* কমন স্টাইল (সব ব্যানারের জন্য একবারে মিনিমাম হাইট ও পজিশন ফিক্সড) */
 .promo-banner-1,
 .promo-banner-2,
 .promo-banner-3 {
     min-height: 480px;
     background-repeat: no-repeat;
     background-size: cover;
-    /* ইমেজ বক্সের পুরো জায়গা নিখুঁতভাবে ফিলাপ করবে */
     background-position: center;
-    /* ইমেজ সবসময় মাঝখানে ফোকাস থাকবে */
     transition: transform 0.3s ease-in-out;
 }
 
-/* ব্যানার ১ এর ইমেজ পাথ এবং ফলব্যাক ব্যাকগ্রাউন্ড কালার */
 .promo-banner-1 {
     background-image: url('../images/Rectangle\ 54.png');
     background-color: #005a9c;
 }
 
-/* ব্যানার ২ এর ইমেজ পাথ এবং ফলব্যাক ব্যাকগ্রাউন্ড কালার */
 .promo-banner-2 {
     background-image: url('../images/Rectangle\ 54\ \(1\).png');
     background-color: #111111;
 }
 
-/* ব্যানার ৩ এর ইমেজ পাথ এবং ফলব্যাক ব্যাকগ্রাউন্ড কালার */
 .promo-banner-3 {
     background-image: url('../images/Rectangle\ 54\ \(2\).png');
     background-color: #fbf1c7;
 }
 
-/* হোভার ইফেক্ট (মাউস নিয়ে গেলে সামান্য বড় হবে, দেখতে চমৎকার লাগবে) */
 .promo-banner-1:hover,
 .promo-banner-2:hover,
 .promo-banner-3:hover {
@@ -733,7 +690,6 @@ a.shoppingCart .cnt h4 {
     overflow: hidden;
 }
 
-/* বড় প্রোডাক্ট ইমেজ কন্টেইনার */
 
 .deal-img-container {
     height: 260px;
@@ -752,8 +708,6 @@ a.shoppingCart .cnt h4 {
     max-height: 100%;
     object-fit: contain;
 }
-
-/* ছোট গ্রিড প্রোডাক্ট ইমেজ */
 .product-img-box {
     align-items: center;
     justify-content: center;
@@ -774,7 +728,6 @@ a.shoppingCart .cnt h4 {
     z-index: 3;
 }
 
-/* হোভার ইফেক্ট */
 .product-grid-item:hover .grid-prod-img {
     transform: scale(1.05);
 }
@@ -784,7 +737,6 @@ a.shoppingCart .cnt h4 {
     z-index: 1;
 }
 
-/* ছোট অ্যাকশন বাটন */
 .btn-action {
     width: 40px;
     height: 40px;
@@ -802,7 +754,6 @@ a.shoppingCart .cnt h4 {
     justify-content: center;
 }
 
-/* টাইমার টেক্সট সাইজ */
 .countdown-container {
     font-size: 1.3rem;
 }
@@ -822,24 +773,18 @@ a.shoppingCart .cnt h4 {
    ========================================================================= */
 
 .wide-discount-banner {
-    /* আপনার ইমেজের পাথ এবং ফলব্যাক ডার্ক গ্রিন কালার */
     background-image: url('../images/Discount\ Bannar\ \(1\).png');
     background-color: #123321;
     background-repeat: no-repeat;
     background-size: cover;
-    /* ইমেজ যেন পুরো বক্স নিখুঁতভাবে কভার করে */
     background-position: center;
-    /* ইমেজ সবসময় সেন্টারে থাকবে */
     min-height: 358px;
-    /* ব্যানারের একটি স্ট্যান্ডার্ড মিনিমাম হাইট */
     display: flex;
     align-items: center;
-    /* ভেতরের টেক্সটগুলোকে লম্বালম্বিভাবে মাঝখানে রাখবে */
     overflow: hidden;
 
 }
 
-/* টেক্সট বক্সের পজিশন ও রিড্যাবিলিটি ঠিক করার জন্য */
 .text-content-box {
     max-width: 450px;
     z-index: 2;
@@ -863,7 +808,6 @@ a.shoppingCart .cnt h4 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ইমেজের কন্টেইনার এবং পজিশন কন্ট্রোল */
 .news-img-box {
     position: relative;
     overflow: hidden;
@@ -874,35 +818,28 @@ a.shoppingCart .cnt h4 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* এর ফলে ইমেজের রেশিও ঠিক রেখে সুন্দরভাবে ফিট হবে */
     transition: transform 0.3s ease-in-out;
 }
-
-/* ডেট ব্যাজ স্টাইল (যদি ফিগমা অনুযায়ী ব্যবহার করতে চান) */
 .news-date-badge {
     z-index: 2;
     min-width: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* রিড মোর বাটন ও টাইটেলের ট্রানজিশন */
 .news-title,
 .read-more-link {
     transition: color 0.2s ease;
 }
 
-/* কার্ডে মাউস নিয়ে গেলে সুন্দর হভার অ্যানিমেশন */
 .news-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* হোভার করলে ভেতরের ইমেজটি হালকা জুম হবে */
 .news-card:hover .news-img {
     transform: scale(1.05);
 }
 
-/* হোভার করলে টাইটেলটি ইকোবাজারের থিম গ্রিন কালার হবে */
 .news-card:hover .news-title {
     color: #2c742f;
 }
@@ -922,39 +859,30 @@ a.shoppingCart .cnt h4 {
     transform: translateY(-5px);
 }
 
-/* কোটেশন আইকন স্টাইল (সোজা এবং হালকা কালার) */
 .quote-icon-box i {
     color: #2c742f;
     opacity: 0.15;
-    /* ব্যাকগ্রাউন্ডের সাথে মিশে থাকার জন্য হালকা করা হলো */
 }
 
-/* ছবি রাখার গোল বক্স কন্টেইনার */
 .testimonial-img-box {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    /* বক্সটিকে গোল করার জন্য */
     overflow: hidden;
-    /* ছবি বক্সের বাইরে বের হতে পারবে না */
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* কাস্টমারের ছবি নিখুঁত গোল করার ট্রিক */
 .customer-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* ছবি চ্যাপ্টা না হয়ে সুন্দরভাবে গোল বক্সে ফিট হবে */
 }
 
-/* রিভিউ স্টারগুলোর উজ্জ্বল হলুদ কালার */
 .review-stars i {
     color: #ffcc00;
-    /* ফিগমা স্ট্যান্ডার্ড ডিপ ইয়োলো/গোল্ডেন কালার */
     font-size: 0.85rem;
 }
 
@@ -969,24 +897,19 @@ a.shoppingCart .cnt h4 {
    INSTAGRAM FEED CUSTOM OVERLAY STYLES
    ========================================================================= */
 
-/* মেইন আইটেম কন্টেইনার */
 .instagram-item {
     position: relative;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* ইনস্টাগ্রামের মেইন ইমেজ */
 .insta-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* ইমেজ চ্যাপ্টা হবে না, স্কয়ার বক্সে নিখুঁত ফিট হবে */
     transition: transform 0.4s ease, filter 0.4s ease;
-    /* জুম এবং ব্লারের স্মুথ ট্রানজিশন */
 }
 
-/* প্রথম অবস্থায় অদৃশ্য থাকা ওভারলে লেয়ার */
 .insta-overlay {
     position: absolute;
     top: 0;
@@ -994,39 +917,29 @@ a.shoppingCart .cnt h4 {
     width: 100%;
     height: 100%;
     background-color: rgba(44, 116, 47, 0.4);
-    /* ইকোবাজার থিম গ্রিন শেডের হালকা ওভারলে */
     opacity: 0;
-    /* স্বাভাবিক অবস্থায় লুকানো থাকবে */
     transition: all 0.4s ease;
     z-index: 2;
 }
 
-/* ওভারলে এর ভেতরের ইনস্টাগ্রাম আইকন অ্যানিমেশন */
 .insta-overlay i {
     transform: scale(0.5);
-    /* প্রথম অবস্থায় আইকনটি ছোট থাকবে */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* বাউন্সি পপ-আপ ইফেক্ট */
 }
 
 /* =========================================================================
-   INSTAGRAM FEED HOVER EFFECTS (মাউস রাখলে যা ঘটবে)
+   INSTAGRAM FEED HOVER EFFECTS 
    ========================================================================= */
 
-/* ১. হোভার করলে ইমেজ হালকা বড় হবে এবং ব্লার হবে */
 .instagram-item:hover .insta-img {
     transform: scale(1.08);
-    /* হালকা জুম */
     filter: blur(3px);
-    /* আপনার রিকোয়ারমেন্ট অনুযায়ী স্মুথ ব্লার */
 }
 
-/* ২. হোভার করলে গ্রিন ওভারলে লেয়ারটি ভেসে উঠবে */
 .instagram-item:hover .insta-overlay {
     opacity: 1;
 }
 
-/* ৩. হোভার করলে ভেতরের আইকনটি মাঝখান থেকে পপ-আপ হয়ে বড় হবে */
 .instagram-item:hover .insta-overlay i {
     transform: scale(1);
 }
@@ -1037,7 +950,6 @@ a.shoppingCart .cnt h4 {
    FOOTER STYLES
    ========================================================================= */
 
-/* ১. নিউজলেটার বার কাস্টমাইজেশন */
 .newsletter-bar {
     background-color: #f7f7f7 !important;
 }
@@ -1052,38 +964,26 @@ a.shoppingCart .cnt h4 {
 .newsletter-form .form-control:focus {
     box-shadow: none;
     border-color: #00b127;
-    /* ফোকাস করলে ব্র্যান্ড গ্রিন হবে */
 }
 
-/* সাবস্ক্রাইব বাটন */
 .subscribe-btn {
     background-color: #00b127 !important;
-    /* ফিগমা ব্রাইট গ্রিন কালার */
     border: none !important;
     height: 46px;
     font-weight: 600;
     font-size: 0.95rem;
     transition: background-color 0.2s ease-in-out;
 
-    /* 
-       নিচের প্রপার্টিগুলো বাটনটিকে ইনপুট বক্সের ওপর-নিচে একদম সমানভাবে 
-       ১০০% ফিট (fully fill up) করতে সাহায্য করবে।
-    */
     height: 100% !important;
-    /* ইনপুট বক্সের সমপরিমাণ হাইট নেবে */
     top: 0 !important;
-    /* একদম ওপর থেকে শুরু হবে */
     transform: none !important;
-    /* আগের দেওয়া translate-middle-y ট্রিকটি বাতিল করবে */
     margin: 0 !important;
-    /* বাড়তি কোনো মার্জিন থাকলে তা রিমুভ করবে */
 }
 
 .subscribe-btn:hover {
     background-color: #008f1f !important;
 }
 
-/* সোশ্যাল মিডিয়া আইকন সার্কেল */
 .social-links .social-icon {
     width: 40px;
     height: 40px;
@@ -1102,7 +1002,6 @@ a.shoppingCart .cnt h4 {
     color: #000000;
 }
 
-/* প্রথম ফেসবুক আইকনটি ফিগমাতে গ্রিন সার্কেলে মোড়ানো */
 .social-links .social-icon.fb {
     background-color: #00b127;
     color: #ffffff;
@@ -1111,13 +1010,10 @@ a.shoppingCart .cnt h4 {
 .social-links .social-icon.fb:hover {
     background-color: #008f1f;
 }
-
-/* ২. মেইন ফুটার এরিয়া কাস্টমাইজেশন */
 .footer-content {
     background-color: #1a1a1a !important;
 }
 
-/* ফুটার কলাম row — desktop zoom-এ nowrap */
 .footer-columns-inner {
     gap: 24px;
 }
@@ -1158,12 +1054,10 @@ a.shoppingCart .cnt h4 {
     white-space: nowrap;
 }
 
-/* ফুটার লিংকের হোভার অ্যানিমেশন */
 .footer-links li {
     margin-bottom: 12px;
 }
 
-/* কন্টাক্ট ইনফো আন্ডারলাইন স্টাইল */
 .contact-info a {
     font-size: 0.95rem;
     font-weight: 500;
@@ -1173,8 +1067,6 @@ a.shoppingCart .cnt h4 {
 .contact-info a:hover {
     opacity: 0.8;
 }
-
-/* পেমেন্ট মেথড ব্যাজ কাস্টম */
 .payment-methods .badge {
     background-color: #262626 !important;
     display: flex;
@@ -1187,7 +1079,6 @@ a.shoppingCart .cnt h4 {
 
 
 
-/* ডামি ইমেজের সাইজ ঠিক রাখার জন্য প্লেসহোল্ডার */
 .img-placeholder,
 .product-img-placeholder {
     background-color: #f5f5f5;
@@ -1198,7 +1089,7 @@ a.shoppingCart .cnt h4 {
 
 
 /* =========================================================================
-   SHOP PAGE — ব্রেডক্রাম্ব ব্যানার সেকশন
+   SHOP PAGE 
    ========================================================================= */
 .shop-breadcrumb-banner {
     background-color: var(--gren-gray-scale-50);
@@ -1240,7 +1131,7 @@ a.shoppingCart .cnt h4 {
 
 
 /* =========================================================================
-   SHOP PAGE — সাইডবার ফিল্টার প্যানেল
+   SHOP PAGE 
    ========================================================================= */
 .shop-filter-panel {
     border: 1px solid var(--gray-scale-gray-–-100);
@@ -1268,7 +1159,6 @@ a.shoppingCart .cnt h4 {
     transform: rotate(-90deg);
 }
 
-/* ক্যাটাগরি তালিকা — স্ক্রলযোগ্য (৮+ আইটেম) */
 .shop-category-list {
     max-height: 280px;
     overflow-y: auto;
@@ -1307,7 +1197,7 @@ a.shoppingCart .cnt h4 {
 
 
 /* =========================================================================
-   SHOP PAGE — প্রাইস রেঞ্জ ডুয়াল স্লাইডার
+   SHOP PAGE 
    ========================================================================= */
 .price-range-wrapper {
     position: relative;
@@ -1372,9 +1262,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   SHOP PAGE — রেটিং ফিল্টার ও ট্যাগ পিল
-   ========================================================================= */
 .rating-filter-item {
     padding: 6px 0;
 }
@@ -1408,9 +1295,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   SHOP PAGE — কন্ট্রোল বার, অ্যাক্টিভ ফিল্টার ও সিলেক্ট
-   ========================================================================= */
 .shop-select {
     min-width: 110px;
     border-color: var(--gray-scale-gray-–-100);
@@ -1454,9 +1338,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   SHOP PAGE — প্রোডাক্ট কার্ড (index product-card এক্সটেনশন)
-   ========================================================================= */
 .shop-product-card {
     overflow: hidden;
     display: flex;
@@ -1476,9 +1357,6 @@ a.shoppingCart .cnt h4 {
     transform: scale(1.04);
 }
 
-/* ======================================
-শপ প্রোডাক্ট কার্ডের শেয়ারড স্টাইল
-====================================== */
 .shop-product-card .product-img-box {
     display: flex;
     align-items: center;
@@ -1512,13 +1390,11 @@ a.shoppingCart .cnt h4 {
     transform: translateY(-1px);
 }
 
-/* হোভার স্টেট ডেমো কার্ড */
 .shop-card-hover {
     border-color: var(--branding-success-dark) !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* কুইক ভিউ ও উইশলিস্ট — হোভারে দৃশ্যমান */
 .shop-card-actions {
     position: absolute;
     top: 12px;
@@ -1542,10 +1418,6 @@ a.shoppingCart .cnt h4 {
     visibility: visible;
 }
 
-
-/* =========================================================================
-   SHOP PAGE — পেজিনেশন
-   ========================================================================= */
 .shop-pagination .shop-page-link {
     width: 40px;
     height: 40px;
@@ -1578,7 +1450,6 @@ a.shoppingCart .cnt h4 {
     color: var(--gray-scale-white);
 }
 
-/* মোবাইল ফিল্টার ট্রিগার বাটন */
 .shop-filter-trigger {
     font-weight: 500;
     transition: all 0.2s ease;
@@ -1591,7 +1462,7 @@ a.shoppingCart .cnt h4 {
 
 
 /* =========================================================================
-   ABOUT PAGE — ব্রেডক্রাম্ব / টাইটেল ব্যানার
+   ABOUT PAGE 
    ========================================================================= */
 .about-breadcrumb-banner {
     background-color: var(--gren-gray-scale-50);
@@ -1632,9 +1503,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   ABOUT PAGE — হিরো স্টোরি ও টাইপোগ্রাফি
-   ========================================================================= */
 .about-section-title {
     font-size: 2rem;
     line-height: 1.3;
@@ -1678,13 +1546,7 @@ a.shoppingCart .cnt h4 {
     display: block;
 
 
-    /* [BANGLA COMMENT] ক্রুশিয়াল ফিক্স: 
-       পেছনের সলিড হোয়াইট/ধূসর কালার ব্যাকগ্রাউন্ড রিমুভ করে ইমেজকে ফিগমার মতো 
-       নিখুঁত ট্রান্সপারেন্ট লুকে কনভার্ট করার জন্য CSS mix-blend-mode ব্যবহার করা হয়েছে 
-    */
-    /* mix-blend-mode: multiply;  */
     filter: contrast(1.05) brightness(1.03);
-    /* ব্লেন্ডিং এর পর ছবির উজ্জ্বলতা ধরে রাখার ফিল্টার */
 }
 
 .about-hero-person-img-02 {
@@ -1698,21 +1560,13 @@ a.shoppingCart .cnt h4 {
     height: auto;
     width: auto;
 
-
-    /* [BANGLA COMMENT] ক্রুশিয়াল ফিক্স: 
-       পেছনের সলিড হোয়াইট/ধূসর কালার ব্যাকগ্রাউন্ড রিমুভ করে ইমেজকে ফিগমার মতো 
-       নিখুঁত ট্রান্সপারেন্ট লুকে কনভার্ট করার জন্য CSS mix-blend-mode ব্যবহার করা হয়েছে 
-    */
-    /* mix-blend-mode: multiply;  */
     filter: contrast(1.05) brightness(1.03);
-    /* ব্লেন্ডিং এর পর ছবির উজ্জ্বলতা ধরে রাখার ফিল্টার */
 }
 
 .about-img-frame:hover .about-story-img {
     transform: scale(1.03);
 }
 
-/* ফিচার আইকন — ছোট গ্রিড (ব্লক ২) */
 .about-feature-icon {
     width: 48px;
     height: 48px;
@@ -1730,7 +1584,6 @@ a.shoppingCart .cnt h4 {
     color: var(--gray-scale-gray-–-900);
 }
 
-/* চেকলিস্ট (ব্লক ৩) */
 .about-checklist li {
     display: flex;
     align-items: flex-start;
@@ -1758,9 +1611,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   ABOUT PAGE — ব্র্যান্ড হাইলাইটস স্ট্রিপ
-   ========================================================================= */
 .about-highlight-card {
     background: var(--gray-scale-white);
     border-radius: 8px;
@@ -1784,15 +1634,10 @@ a.shoppingCart .cnt h4 {
     font-size: 1.5rem;
 }
 
-
-/* =========================================================================
-   ABOUT PAGE — টিম শোকেস ও হোভার ওভারলে
-   ========================================================================= */
 .about-team-slider {
     padding: 0 48px;
 }
 
-/* ট্যাবলেটে হরাইজন্টাল স্ক্রল কন্টেইনার */
 .about-team-scroll {
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -1871,7 +1716,6 @@ a.shoppingCart .cnt h4 {
     transform: scale(1.08);
 }
 
-/* টিম স্লাইডার নেভিগেশন বাটন */
 .about-team-nav {
     position: absolute;
     top: 50%;
@@ -1905,9 +1749,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   ABOUT PAGE — টেস্টিমোনিয়াল ক্যারোসেল
-   ========================================================================= */
 .about-testimonial-card {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
 }
@@ -1931,9 +1772,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   ABOUT PAGE — পার্টনার লোগো রিবন
-   ========================================================================= */
 .about-partners-ribbon {
     overflow-x: auto;
     scrollbar-width: thin;
@@ -1968,7 +1806,7 @@ a.shoppingCart .cnt h4 {
 
 
 /* =========================================================================
-   BLOG PAGE — লেআউট এবং সাধারণ সাইডবার উপাদান
+   BLOG PAGE 
    ========================================================================= */
 .blog-sidebar .sidebar-widget {
     background-color: var(--gray-scale-white);
@@ -1983,7 +1821,6 @@ a.shoppingCart .cnt h4 {
     padding-bottom: 10px;
 }
 
-/* ব্লগ উইজেট সার্চ ফর্ম কাস্টমাইজেশন */
 .blog-search-form .form-control {
     height: 46px;
     padding-right: 45px;
@@ -1997,7 +1834,6 @@ a.shoppingCart .cnt h4 {
     box-shadow: none;
 }
 
-/* ক্যাটাগরি লিস্ট আইটেম ও হোভার স্টেট */
 .widget-categories ul li a {
     color: var(--gray-scale-gray-–-700);
     font-size: 0.875rem;
@@ -2011,7 +1847,6 @@ a.shoppingCart .cnt h4 {
     font-weight: 500;
 }
 
-/* পপুলার ট্যাগ ডিজাইন */
 .widget-tags .badge-tag {
     background-color: #f7f7f7;
     border: 1px solid #e6e6e6;
@@ -2026,9 +1861,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   BLOG PAGE — ব্লগ ফিড প্রধান কার্ড ডিজাইন
-   ========================================================================= */
 .blog-main-card {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2039,7 +1871,6 @@ a.shoppingCart .cnt h4 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* ইমেজ রেসিশিউ ও জুম ট্রানজিশন */
 .blog-img-box {
     height: 240px;
     background-color: #f5f5f5;
@@ -2049,13 +1880,11 @@ a.shoppingCart .cnt h4 {
     transform: scale(1.05);
 }
 
-/* ফিগমা ক্যালেন্ডার ডেট ব্যাজ */
 .blog-date-badge {
     z-index: 2;
     min-width: 60px;
 }
 
-/* কন্টেন্ট বডি টাইপোগ্রাফি */
 .blog-title {
     font-size: 1.25rem;
     font-weight: 500;
@@ -2074,7 +1903,6 @@ a.shoppingCart .cnt h4 {
     line-height: 1.6;
 }
 
-/* রিড মোর বাটন হোভার অ্যানিমেশন */
 .btn-read-more {
     transition: color 0.2s ease;
 }
@@ -2092,9 +1920,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   BLOG PAGE — পেজিনেশন কাস্টমাইজেশন
-   ========================================================================= */
 .pagination-custom .page-link {
     width: 40px;
     height: 40px;
@@ -2119,7 +1944,7 @@ a.shoppingCart .cnt h4 {
 
 
 /* =========================================================================
-   আওয়ার গ্যালারি সেকশন (Our Gallery Widget)
+   (Our Gallery Widget)
    ========================================================================= */
 .gallery-grid {
     display: grid;
@@ -2143,7 +1968,7 @@ a.shoppingCart .cnt h4 {
 }
 
 /* =========================================================================
-   রিসেন্টলি অ্যাডেড সেকশন (Recently Added Widget)
+ (Recently Added Widget)
    ========================================================================= */
 .recent-post-item {
     border-bottom: 1px dashed #e6e6e6;
@@ -2193,8 +2018,7 @@ a.shoppingCart .cnt h4 {
 }
 
 /* =========================================================================
-   CONTACT PAGE — ব্রেডক্রাম্ব ব্যানার সেকশন
-   পেজ শিরোনাম এবং নেভিগেশন ট্র্যাক দেখানোর জন্য ডার্ক ব্যানার
+   CONTACT PAGE 
    ========================================================================= */
 .contact-breadcrumb-banner {
     background-color: #1a1a1a;
@@ -2211,7 +2035,6 @@ a.shoppingCart .cnt h4 {
     min-height: 120px;
 }
 
-/* ব্রেডক্রাম্ব লিংক ও সেপারেটর স্টাইলিং */
 .contact-breadcrumb {
     font-size: 0.875rem;
     margin-bottom: 0;
@@ -2234,11 +2057,6 @@ a.shoppingCart .cnt h4 {
     color: var(--gray-scale-gray-–-400);
 }
 
-
-/* =========================================================================
-   CONTACT PAGE — ইনফো কার্ড (ঠিকানা, ইমেইল, ফোন)
-   বাম কলামের সাদা বর্ডার কার্ড — তিনটি তথ্য আইটেম সহ
-   ========================================================================= */
 .contact-info-card {
     background: var(--gray-scale-white);
     border: 1px solid var(--gray-scale-gray-–-100);
@@ -2250,7 +2068,6 @@ a.shoppingCart .cnt h4 {
     gap: 0;
 }
 
-/* প্রতিটি তথ্য আইটেম — আইকন + টেক্সট পাশাপাশি */
 .contact-info-item {
     display: flex;
     align-items: flex-start;
@@ -2261,7 +2078,6 @@ a.shoppingCart .cnt h4 {
     align-items: center;
 }
 
-/* আইকন মোড়ক — গোলাকার সবুজ বর্ডার রিং */
 .contact-icon-wrap {
     width: 56px;
     height: 56px;
@@ -2282,7 +2098,6 @@ a.shoppingCart .cnt h4 {
     border-color: var(--branding-success);
 }
 
-/* টেক্সট এবং লিংক স্টাইলিং */
 .contact-info-text {
     font-style: normal;
     font-size: 0.9rem;
@@ -2312,10 +2127,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   CONTACT PAGE — ফর্ম কার্ড ("Just Say Hello!")
-   ডান কলামের সাদা কার্ড — শিরোনাম, সাবটাইটেল এবং ইনপুট ফিল্ড সহ
-   ========================================================================= */
 .contact-form-card {
     background: var(--gray-scale-white);
     border: 1px solid var(--gray-scale-gray-–-100);
@@ -2323,7 +2134,6 @@ a.shoppingCart .cnt h4 {
     padding: 40px 36px;
 }
 
-/* ফর্ম শিরোনাম */
 .contact-form-title {
     font-size: 1.75rem;
     font-weight: 700;
@@ -2332,15 +2142,12 @@ a.shoppingCart .cnt h4 {
     line-height: 1.3;
 }
 
-/* ফর্ম সাবটাইটেল / বিবরণ */
 .contact-form-subtitle {
     font-size: 0.9rem;
     color: var(--gray-scale-gray-–-500);
     line-height: 1.65;
     margin-bottom: 28px;
 }
-
-/* ইনপুট ও টেক্সটএরিয়া ফিল্ড স্টাইলিং */
 .contact-input {
     height: 50px;
     border: 1px solid var(--gray-scale-gray-–-200);
@@ -2363,7 +2170,6 @@ a.shoppingCart .cnt h4 {
     font-size: 0.875rem;
 }
 
-/* টেক্সটএরিয়া — সাবজেক্ট ফিল্ড */
 .contact-textarea {
     height: auto !important;
     resize: vertical;
@@ -2371,7 +2177,6 @@ a.shoppingCart .cnt h4 {
     line-height: 1.6;
 }
 
-/* সাবমিট বাটন — ফিগমার গ্রিন পিল বাটন */
 .contact-submit-btn {
     display: inline-flex;
     align-items: center;
@@ -2411,10 +2216,6 @@ a.shoppingCart .cnt h4 {
 }
 
 
-/* =========================================================================
-   CONTACT PAGE — ম্যাপ সেকশন
-   ফুল-উইডথ গুগল ম্যাপস এমবেড, স্টোরের অবস্থান দেখানো
-   ========================================================================= */
 .contact-map-section {
     line-height: 0;
     overflow: hidden;

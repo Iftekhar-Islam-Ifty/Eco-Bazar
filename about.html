@@ -14,9 +14,7 @@
 
 <body>
 
-    <!-- =========================================================================
-         হেডার সেকশন (index.html থেকে ইনহেরিট — zoom-fix ক্লাস অপরিবর্তিত)
-         ========================================================================= -->
+
     <header class="header">
 
         <div class="topHeader">
@@ -53,15 +51,15 @@
                         <a href="index.html"><img src="assets/images/logo.svg" alt="Ecobazar"></a>
                     </div>
                     <div class="mainHeader-search flex-shrink-0">
-                        <form>
+                        <form action="shop.html" method="get">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="1.5"
                                         d="M15.553 15.553a7.06 7.06 0 1 0-9.985-9.985a7.06 7.06 0 0 0 9.985 9.985m0 0L20 20" />
                                 </svg></span>
                             <div class="d-flex flex-nowrap">
-                                <input type="text" placeholder="Search">
-                                <button type="button">Search</button>
+                                <input type="search" name="q" placeholder="Search">
+                                <button type="submit">Search</button>
                             </div>
                         </form>
                     </div>
@@ -148,23 +146,33 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <form class="mobile-search mb-3" action="shop.html" method="get">
+                                    <div class="input-group">
+                                        <input type="search" name="q" class="form-control" placeholder="Search">
+                                        <button class="btn btn-success" type="submit">Search</button>
+                                    </div>
+                                </form>
+                                <ul class="navbar-nav mobile-primary-nav me-auto mb-2">
                                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                    <li>
-                                        <a class="text-dark" href="shop.html">Shop
-                                            <span class="arrow"><iconify-icon icon="iconoir:nav-arrow-down" width="22"
-                                                    height="22"></iconify-icon></span>
-                                            <ul class="submenu">
-                                                <li><a href="shop.html">Vegetable</a></li>
-                                                <li><a href="shop.html">Fruit</a></li>
-                                                <li><a href="shop.html">Organic Products</a></li>
-                                                <li><a href="shop.html">Dairy Products</a></li>
-                                            </ul>
-                                        </a>
+                                    <li class="nav-item mobile-shop-item">
+                                        <div class="mobile-shop-row d-flex align-items-center">
+                                            <a class="nav-link flex-grow-1" href="shop.html">Shop</a>
+                                            <button type="button" class="mobile-shop-toggle" aria-expanded="false"
+                                                aria-label="Toggle shop categories">
+                                                <iconify-icon icon="iconoir:nav-arrow-down" width="20"
+                                                    height="20"></iconify-icon>
+                                            </button>
+                                        </div>
+                                        <ul class="submenu list-unstyled mb-0">
+                                            <li><a href="shop.html">Vegetable</a></li>
+                                            <li><a href="shop.html">Fruit</a></li>
+                                            <li><a href="shop.html">Organic Products</a></li>
+                                            <li><a href="shop.html">Dairy Products</a></li>
+                                        </ul>
                                     </li>
                                     <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -198,9 +206,7 @@
         </div>
     </header>
 
-    <!-- =========================================================================
-         ১. ব্রেডক্রাম্ব / টাইটেল ব্যানার সেকশন
-         ========================================================================= -->
+
     <section class="about-breadcrumb-banner">
         <div class="container">
             <div class="about-breadcrumb-inner d-flex  align-items-center text-center">
@@ -215,13 +221,11 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         ২. হিরো স্টোরি ব্লক সেকশন (অল্টারনেটিং লেআউট)
-         ========================================================================= -->
+
     <section class="about-hero-story py-5 my-4">
         <div class="container">
 
-            <!-- ব্লক ১: টেক্সট বামে, ইমেজ ডানে -->
+            
             <div class="row align-items-center g-4 g-lg-5 mb-5 pb-lg-3">
                 <div class="col-lg-6 col-12">
                     <h2 class="about-section-title fw-bold fs-1 mb-4">100% Trusted <br> Organic Food Store</h2>
@@ -240,7 +244,6 @@
                 </div>
             </div>
 
-            <!-- ব্লক ২: ইমেজ বামে, টেক্সট + ফিচার গ্রিড ডানে -->
             <div class="row align-items-center about-background-img g-4 g-lg-5 mb-5 pb-lg-3">
                 <div class="col-lg-6 col-12 order-lg-1 order-2">
                     <div class="about-img-frame rounded overflow-hidden">
@@ -317,7 +320,6 @@
                 </div>
             </div>
 
-            <!-- ব্লক ৩: টেক্সট + চেকলিস্ট বামে, ইমেজ ডানে -->
             <div class="row align-items-center bla g-4 g-lg-5">
                 <div class="col-lg-6 col-12">
                     <h2 class="about-section-title fw-bold mb-4">We Delivered, You <br> Enjoy Your Order.</h2>
@@ -326,7 +328,8 @@
                         accumsan rhoncus. Curabitur auctor bibendum nunc eget elementum.</p>
                     <ul class="about-checklist list-unstyled mb-4">
                         <li><i class="fa-solid fa-circle-check"></i> Sed in metus pellentesque.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Fusce et ex commodo, aliquam nulla efficitur, tempus lorem.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Fusce et ex commodo, aliquam nulla efficitur,
+                            tempus lorem.</li>
                         <li><i class="fa-solid fa-circle-check"></i> Maecenas ut nunc fringilla erat varius.</li>
                     </ul>
                     <a href="shop.html" class="btn btn-success rounded-pill px-4 py-2 fw-semibold about-shop-btn">
@@ -343,9 +346,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         ৩. ব্র্যান্ড ফিচার / হাইলাইটস স্ট্রিপ
-         ========================================================================= -->
+
     <section class="about-highlights py-5 bg-light">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
@@ -383,9 +384,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         ৪. টিম ও লিডারশিপ শোকেস সেকশন
-         ========================================================================= -->
+
     <section class="about-team-section py-5 my-4">
         <div class="container">
             <div class="text-center mb-5">
@@ -486,9 +485,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         ৫. ক্লায়েন্ট টেস্টিমোনিয়াল / ফিডব্যাক স্লাইডার সেকশন
-         ========================================================================= -->
+
     <section class="about-testimonial-section py-5 bg-light">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
@@ -670,9 +667,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         ৬. পার্টনার ব্র্যান্ড লোগো রিবন সেকশন
-         ========================================================================= -->
+
     <section class="about-partners py-5">
         <div class="container">
             <div class="about-partners-ribbon d-flex align-items-center justify-content-between flex-nowrap gap-3">
@@ -703,9 +698,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         ফুটার সেকশন (index.html থেকে ইনহেরিট)
-         ========================================================================= -->
+
     <footer class="main-footer">
         <div class="newsletter-bar py-5 bg-light">
             <div class="container">
@@ -767,10 +760,10 @@
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Helps</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Faqs</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Faqs</a></li>
+                            <li><a href="contact.html">Terms & Condition</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
@@ -778,17 +771,17 @@
                         <ul class="list-unstyled footer-links small">
                             <li><a href="about.html">About</a></li>
                             <li><a href="shop.html">Shop</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Track Order</a></li>
+                            <li><a href="shop.html">Product</a></li>
+                            <li><a href="shop.html">Track Order</a></li>
                         </ul>
                     </div>
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Categories</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Fruit & Vegetables</a></li>
-                            <li><a href="#">Meat & Fish</a></li>
-                            <li><a href="#">Bread & Bakery</a></li>
-                            <li><a href="#">Beauty & Health</a></li>
+                            <li><a href="shop.html">Fruit & Vegetables</a></li>
+                            <li><a href="shop.html">Meat & Fish</a></li>
+                            <li><a href="shop.html">Bread & Bakery</a></li>
+                            <li><a href="shop.html">Beauty & Health</a></li>
                         </ul>
                     </div>
                 </div>

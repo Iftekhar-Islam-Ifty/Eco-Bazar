@@ -14,12 +14,10 @@
 
 <body>
 
-    <!-- =========================================================================
-         হেডার সেকশন (index.html থেকে ইনহেরিট)
-         ========================================================================= -->
+
     <header class="header">
 
-        <!-- টপ হেডার: 1200px container + flex-shrink — zoom-এ wrap/shrink রোধ -->
+
         <div class="topHeader">
             <div class="container">
                 <div class="topHeader-inner d-flex align-items-center justify-content-between flex-nowrap">
@@ -47,7 +45,7 @@
             </div>
         </div>
 
-        <!-- মেইন হেডার: logo + search + utilities — flex-shrink সুরক্ষা -->
+
         <div class="mainHeader d-none d-lg-block">
             <div class="container">
                 <div class="mainHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
@@ -55,15 +53,15 @@
                         <a href="index.html"><img src="assets/images/logo.svg" alt="Ecobazar"></a>
                     </div>
                     <div class="mainHeader-search flex-shrink-0">
-                        <form>
+                        <form action="shop.html" method="get">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="1.5"
                                         d="M15.553 15.553a7.06 7.06 0 1 0-9.985-9.985a7.06 7.06 0 0 0 9.985 9.985m0 0L20 20" />
                                 </svg></span>
                             <div class="d-flex flex-nowrap">
-                                <input type="text" placeholder="Search">
-                                <button type="button">Search</button>
+                                <input type="search" name="q" placeholder="Search">
+                                <button type="submit">Search</button>
                             </div>
                         </form>
                     </div>
@@ -97,7 +95,6 @@
             </div>
         </div>
 
-        <!-- বটম হেডার: flex-shrink: 0 + max-width 1200px — zoom-এ layout ভাঙা রোধ -->
         <div class="bottomHeader d-none d-lg-block">
             <div class="container">
                 <div class="bottomHeader-inner d-flex align-items-center justify-content-between">
@@ -130,7 +127,7 @@
             </div>
         </div>
 
-        <!-- মোবাইল হেডার: flex-shrink সুরক্ষা -->
+
         <div class="mblHeader d-lg-none">
             <div class="container">
                 <div class="mblHeader-inner d-flex align-items-center justify-content-between flex-nowrap gap-3">
@@ -152,24 +149,33 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <form class="mobile-search mb-3" action="shop.html" method="get">
+                                    <div class="input-group">
+                                        <input type="search" name="q" class="form-control" placeholder="Search">
+                                        <button class="btn btn-success" type="submit">Search</button>
+                                    </div>
+                                </form>
+                                <ul class="navbar-nav mobile-primary-nav me-auto mb-2">
                                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                    <li>
-                                        <a class="text-dark active" href="shop.html">Shop
-                                            <span class="arrow"><iconify-icon icon="iconoir:nav-arrow-down" width="22"
-                                                    height="22"></iconify-icon></span>
-                                            <ul class="submenu">
-                                                <li><a href="shop.html">Vegetable</a></li>
-                                                <li><a href="shop.html">Fruit</a></li>
-                                                <li><a href="shop.html">Organic Products</a></li>
-                                                <li><a href="shop.html">Dairy Products</a></li>
-                                            </ul>
-                                        </a>
+                                    <li class="nav-item mobile-shop-item">
+                                        <div class="mobile-shop-row d-flex align-items-center">
+                                            <a class="nav-link flex-grow-1" href="shop.html">Shop</a>
+                                            <button type="button" class="mobile-shop-toggle" aria-expanded="false"
+                                                aria-label="Toggle shop categories">
+                                                <iconify-icon icon="iconoir:nav-arrow-down" width="20"
+                                                    height="20"></iconify-icon>
+                                            </button>
+                                        </div>
+                                        <ul class="submenu list-unstyled mb-0">
+                                            <li><a href="shop.html">Vegetable</a></li>
+                                            <li><a href="shop.html">Fruit</a></li>
+                                            <li><a href="shop.html">Organic Products</a></li>
+                                            <li><a href="shop.html">Dairy Products</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -203,9 +209,6 @@
         </div>
     </header>
 
-    <!-- =========================================================================
-         ১. ব্রেডক্রাম্ব / টাইটেল ব্যানার সেকশন
-         ========================================================================= -->
     <section class="about-breadcrumb-banner">
         <div class="container">
             <div class="about-breadcrumb-inner d-flex  align-items-center text-center">
@@ -213,7 +216,7 @@
                     <ol class="breadcrumb about-breadcrumb mb-2 justify-content-center">
                         <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page"><a href="#">About Us</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
                     </ol>
                 </nav>
             </div>
@@ -803,12 +806,8 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-     FOOTER SECTION (নিউজলেটার এবং মেইন ফুটার লিংক)
-     ========================================================================= -->
     <footer class="main-footer">
 
-        <!-- ১. ওপরের অংশ: নিউজলেটার সাবস্ক্রিপশন বার (হালকা ব্যাকগ্রাউন্ড) -->
         <div class="newsletter-bar py-5 bg-light">
             <div class="container">
                 <div class="row align-items-center g-4">
@@ -839,23 +838,20 @@
             </div>
         </div>
 
-        <!-- ২. নিচের অংশ: মেইন ফুটার কন্টেন্ট (ডার্ক ব্যাকগ্রাউন্ড) -->
         <div class="footer-content py-5 text-secondary">
             <div class="container">
                 <div class="footer-columns-inner row g-4 flex-lg-nowrap">
                     <div class="col-md-6 col-lg-3 footer-col flex-shrink-0 text-center text-md-start">
 
-                        <!-- সরাসরি লোগো ইমেজ বসানোর ব্যবস্থা (টেক্সট ছাড়া) -->
                         <div class="footer-logo-wrapper mb-3">
-                            <a href="#" class="d-inline-block">
-                                <!-- "Footer.png" ফাইলের ডিজাইন অনুযায়ী আপনার লোগো ইমেজটি এখানে বসবে -->
+                            <a href="index.html" class="d-inline-block">
+
                                 <img src="assets/images/Logo.png" alt="Ecobazar Logo" class="footer-brand-logo">
                             </a>
                         </div>
                         <p class="small mb-4">Morbi cursus porttitor enim lobortis molestie. Duis gravida
                             turpis dui, eget bibendum magna congue nec.</p>
 
-                        <!-- কন্টাক্ট ইনফো (ফোন ও ইমেইল) -->
                         <div
                             class="contact-info d-flex flex-nowrap justify-content-center justify-content-md-start align-items-center gap-2 small">
                             <a href="tel:2195550114"
@@ -867,7 +863,7 @@
                         </div>
                     </div>
 
-                    <!-- কলাম ২: My Account লিংকলিস্ট -->
+
                     <div class="col-4 col-md-3 col-lg-2 ms-lg-auto footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3 ">My Account</h6>
                         <ul class="list-unstyled footer-links small">
@@ -878,51 +874,51 @@
                         </ul>
                     </div>
 
-                    <!-- কলাম ৩: Helps লিংকলিস্ট -->
+
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Helps</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Faqs</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html">Faqs</a></li>
+                            <li><a href="contact.html">Terms & Condition</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
                         </ul>
                     </div>
 
-                    <!-- কলাম ৪: Proxy লিংকলিস্ট -->
+
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3">Proxy</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Track Order</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop.html">Product</a></li>
+                            <li><a href="shop.html">Track Order</a></li>
                         </ul>
                     </div>
 
-                    <!-- কলাম ৫: Categories লিংকলিস্ট -->
+
                     <div class="col-4 col-md-3 col-lg-2 footer-col footer-title flex-shrink-0">
                         <h6 class="text-white fw-bold mb-3 ">Categories</h6>
                         <ul class="list-unstyled footer-links small">
-                            <li><a href="#">Fruit & Vegetables</a></li>
-                            <li><a href="#">Meat & Fish</a></li>
-                            <li><a href="#">Bread & Bakery</a></li>
-                            <li><a href="#">Beauty & Health</a></li>
+                            <li><a href="shop.html">Fruit & Vegetables</a></li>
+                            <li><a href="shop.html">Meat & Fish</a></li>
+                            <li><a href="shop.html">Bread & Bakery</a></li>
+                            <li><a href="shop.html">Beauty & Health</a></li>
                         </ul>
                     </div>
 
                 </div>
 
-                <!-- ৩. বটম পার্ট: কপিরাইট এবং পেমেন্ট গেটওয়ে গেট -->
+
                 <hr class="border-secondary my-4 opacity-25">
                 <div
                     class="footer-bottom-inner d-flex flex-column flex-md-row justify-content-between align-items-center flex-md-nowrap gap-3 pt-2">
-                    <!-- কপিরাইট টেক্সট -->
+
                     <p class="small mb-0">Ecobazar eCommerce © 2021. All Rights Reserved</p>
 
-                    <!-- পেমেন্ট মেথড গেটওয়ে আইকন গ্রুপ (এখানে আপনি ইমেজ গেটওয়ে ব্যবহার করতে পারেন) -->
+
                     <div class="payment-methods d-flex gap-2">
-                        <!-- ফন্টঅসাম আইকন দিয়ে ডামি বাটন করা, আপনি চাইলে এখানে আপনার "Footer.png"-এর গেটওয়ে ইমেজ ক্রপ করে বসাতে পারেন -->
+
                         <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i
                                 class="fa-brands fa-apple-pay fs-5"></i></span>
                         <span class="badge bg-dark border border-secondary text-white p-2 px-3 small"><i
